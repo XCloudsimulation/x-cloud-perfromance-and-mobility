@@ -1,0 +1,78 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{datetime}
+\usepackage{cite}
+\usepackage[pdftex]{graphicx}
+\usepackage{epstopdf}
+\usepackage[utf8]{inputenc}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{float}
+\usepackage{color}
+\usepackage{subfig}
+\usepackage[hyphens]{url}
+
+\hyphenation{}
+
+\newcommand{\xcloud}{x-cloud}
+\newcommand{\Xcloud}{X-cloud}
+
+\begin{document}
+
+\title{Performance and mobility in the \xcloud}
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{
+\IEEEauthorblockN{Jakub Krzywda}
+\IEEEauthorblockA{Dept. of Computing Science\\Umeå University\\
+SE-901 87 Umeå, Sweden\\
+Email: jakub@cs.umu.se}
+\and
+\IEEEauthorblockN{William Tärneberg}
+\IEEEauthorblockA{Dept. of Electrical and Information Technology\\Lund University\\
+Ole Römers väg 3, 223 63 Lund, Sweden \\
+Email: william.tarneberg@eit.lth.se}}
+
+\maketitle
+
+\begin{abstract}
+%\boldmath
+In an \xcloud topology the resources are dispersed throughout the network. Given that services strictly migrate with the user from, depending on the placement of the service hosts, user mobility will affect the performance perceived performance of the service. The model takes into account the effort of migrating a service and the service performance degradation it introduces.
+
+This paper determines the fundamental service performance issues in system of mobile users with disperead data centres, in relation to the placement of the \xcloud host nodes and explores the user and provider utility of subscribing to an \xcloud node at a certain network depth.
+\end{abstract}
+
+\IEEEpeerreviewmaketitle
+
+\input{introduction.tex}
+
+%------------------------------------------------------------------
+
+\input{desiard_model.tex}
+
+%------------------------------------------------------------------
+
+\input{simulation.tex}
+
+%------------------------------------------------------------------
+
+\section{Results}
+
+%------------------------------------------------------------------
+
+\subsection{Conslusions} 
+
+%------------------------------------------------------------------
+
+\input{future_research.tex}
+
+%------------------------------------------------------------------
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
