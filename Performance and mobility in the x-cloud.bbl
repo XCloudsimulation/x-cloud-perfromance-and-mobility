@@ -1,0 +1,26 @@
+\begin{thebibliography}{1}
+
+\bibitem{chandra2013decentralized}
+Abhishek Chandra, Jon Weissman, and Benjamin Heintz.
+\newblock Decentralized edge clouds.
+\newblock {\em Internet Computing, IEEE}, 17(5):70--73, 2013.
+
+\bibitem{ericsson_akami}
+Ericsson.
+\newblock Ericsson and akamai establish exclusive strategic alliance to create
+  mobile cloud acceleration solutions.
+\newblock Press Release, February 2011.
+\newblock \url{http://www.ericsson.com/news/1488456}.
+
+\bibitem{liu2001traffic}
+Zhen Liu, Nicolas Niclausse, and C{\'e}sar Jalpa-Villanueva.
+\newblock Traffic model and performance evaluation of web servers.
+\newblock {\em Performance Evaluation}, 46(2):77--100, 2001.
+
+\bibitem{5634134}
+G.~Piro, L.A. Grieco, G.~Boggia, F.~Capozzi, and P.~Camarda.
+\newblock Simulating lte cellular systems: An open-source framework.
+\newblock {\em Vehicular Technology, IEEE Transactions on}, 60(2):498--513, Feb
+  2011.
+
+\end{thebibliography}
