@@ -1,5 +1,9 @@
 \begin{thebibliography}{10}
 
+\bibitem{EricssonWhitePaper}
+The telecom cloud oppertunity.
+\newblock Whitepaper, Ericsson, 2012.
+
 \bibitem{ericsson_akami}
 Ericsson AB.
 \newblock Ericsson and akamai establish exclusive strategic alliance to create
@@ -25,6 +29,14 @@ Fabio Baroncelli, Barbara Martini, and Piero Castoldi.
 \newblock Network virtualization for cloud computing.
 \newblock {\em annals of telecommunications-annales des
   t{\'e}l{\'e}communications}, 65(11-12):713--721, 2010.
+
+\bibitem{bettstetter2001smooth}
+Christian Bettstetter.
+\newblock Smooth is better than sharp: A random mobility model for simulation
+  of wireless networks.
+\newblock In {\em Proceedings of the 4th ACM International Workshop on
+  Modeling, Analysis and Simulation of Wireless and Mobile Systems}, MSWIM '01,
+  pages 19--27, New York, NY, USA, 2001. ACM.
 
 \bibitem{5357099}
 G.~Caryer, T.~Rings, J.~Gallop, S.~Schulz, J.~Grabowski, I.~Stokes-Rees, and
