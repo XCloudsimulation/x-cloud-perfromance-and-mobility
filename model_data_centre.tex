@@ -1,0 +1,37 @@
+\subsection{Data center}
+To simplify the model of a data center we will not consider CPU, memory, storage and intra data center network separately.
+Instead, in this paper, we will use an abstraction of one dimensional computational resource.
+
+Hosting VMs in a data center can be modeled in two ways: with or without competition for computational resource.
+
+In the first approach, the resources of a data center are aggregated in one pool that is continuously divisible.
+%Each VM gets an equal part of available resources inversely proportional to the number of VMs hosted in the data center.
+%The bigger is the number of VMs hosted in the data center, the smaller amount of resources each of them gets.
+The pool of resources is divided evenly among all VMs.
+Hence, when the number of VMs hosted in the data center increases, the amount of resources available for each VM shrinks.
+Consequently the service time of processing requests of each VM lengthens.
+
+In the second approach, the resources of a data center are discrete and each computational unit is used exclusively by one VM.
+Therefore, there is no influence of one VM on another.
+To incorporate the fact that the amount of resources is finite we put a limit on the maximal number of VMs that can be hosted in one data center.
+
+\subsubsection{Overhead of VM Migration}
+The overhead of VM migration can be also modeled in different ways depending on the manner how data center resources are represented.
+
+When using the approch where VMs are competing for computational resources, the overhead of VM migration can be modeled by running two instances of VM on both source and destination DC during the time of migration. 
+
+\subsubsection{Possible service hosting schemes}
+
+\begin{itemize}
+\item One service model, one VM is empolyed to host that service for each user.
+\item One service model, each VM hosts multiple but each number of users, behaving as multiple services while still being compatible.
+\end{itemize}
+
+
+At all placement modes:
+\begin{itemize}
+\item Measure RTT for all packetc at UE
+\item Measure DC load
+\item Measure ratio of requests generated vs. processed in \xcloud node
+\item Identify the incurred VM migration load
+\end{itemize}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.4.25)  8 JUL 2014 15:36
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.4.25)  8 JUL 2014 15:58
 entering extended mode
 **Performance*and*mobility*in*the*x-cloud.tex
 
@@ -911,14 +911,24 @@ ted_scenario.tex <performance_delay.jpg, id=11, 461.0826pt x 374.71996pt>
 File: performance_delay.jpg Graphic file (type jpg)
 
 <use performance_delay.jpg>
-Package pdftex.def Info: performance_delay.jpg used on input line 5.
+Package pdftex.def Info: performance_delay.jpg used on input line 7.
 (pdftex.def)             Requested size: 253.04987pt x 205.65062pt.
 )
 (\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\simulat
-ion.tex)
+ion.tex
+(\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\model_s
+ervice.tex)
+(\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\model_m
+obilty.tex)
+(\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\model_m
+obile_network.tex)
+(\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\model_c
+ore_network.tex)
+(\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\model_d
+ata_centre.tex [2 <//osiris/users/eit-wit/Desktop/GitHub/x-cloud-perfromance-an
+d-mobility/performance_delay.jpg>]))
 (\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\experim
-ents.tex [2 <//osiris/users/eit-wit/Desktop/GitHub/x-cloud-perfromance-and-mobi
-lity/performance_delay.jpg>])
+ents.tex)
 (\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\results
 .tex)
 (\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\conslus
@@ -942,11 +952,11 @@ Before submitting the final camera ready copy, remember to:
 ("\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\Perfor
 mance and mobility in the x-cloud.aux") ) 
 Here is how much of TeX's memory you used:
- 14936 strings out of 493921
- 290513 string characters out of 3147276
- 337182 words of memory out of 3000000
+ 14952 strings out of 493921
+ 291513 string characters out of 3147276
+ 338182 words of memory out of 3000000
  17891 multiletter control sequences out of 15000+200000
- 37806 words of font info for 82 fonts, out of 3000000 for 9000
+ 38942 words of font info for 83 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  55i,7n,54p,1049b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc
@@ -957,8 +967,8 @@ Here is how much of TeX's memory you used:
 iKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
 type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on "Performance and mobility in the x-cloud.pdf" (3 pages, 20405
-9 bytes).
+Output written on "Performance and mobility in the x-cloud.pdf" (3 pages, 20539
+5 bytes).
 PDF statistics:
  45 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
