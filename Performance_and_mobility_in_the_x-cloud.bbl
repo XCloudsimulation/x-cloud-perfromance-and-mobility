@@ -1,0 +1,95 @@
+\begin{thebibliography}{10}
+
+\bibitem{EricssonWhitePaper}
+The telecom cloud oppertunity.
+\newblock Whitepaper, Ericsson, 2012.
+
+\bibitem{ericsson_akami}
+Ericsson AB.
+\newblock Ericsson and akamai establish exclusive strategic alliance to create
+  mobile cloud acceleration solutions.
+\newblock Press Release, February 2011.
+\newblock \url{http://www.ericsson.com/news/1488456}.
+
+\bibitem{6563280}
+S.~Abolfazli, Z.~Sanaei, E.~Ahmed, A.~Gani, and R.~Buyya.
+\newblock Cloud-based augmentation for mobile devices: Motivation, taxonomies,
+  and open challenges.
+\newblock {\em Communications Surveys Tutorials, IEEE}, 16(1):337--368, First
+  2014.
+
+\bibitem{agarwal2010volley}
+Sharad Agarwal, John Dunagan, Navendu Jain, Stefan Saroiu, Alec Wolman, and
+  Harbinder Bhogan.
+\newblock Volley: Automated data placement for geo-distributed cloud services.
+\newblock In {\em NSDI}, pages 17--32, 2010.
+
+\bibitem{baroncelli2010network}
+Fabio Baroncelli, Barbara Martini, and Piero Castoldi.
+\newblock Network virtualization for cloud computing.
+\newblock {\em annals of telecommunications-annales des
+  t{\'e}l{\'e}communications}, 65(11-12):713--721, 2010.
+
+\bibitem{bettstetter2001smooth}
+Christian Bettstetter.
+\newblock Smooth is better than sharp: A random mobility model for simulation
+  of wireless networks.
+\newblock In {\em Proceedings of the 4th ACM International Workshop on
+  Modeling, Analysis and Simulation of Wireless and Mobile Systems}, MSWIM '01,
+  pages 19--27, New York, NY, USA, 2001. ACM.
+
+\bibitem{5357099}
+G.~Caryer, T.~Rings, J.~Gallop, S.~Schulz, J.~Grabowski, I.~Stokes-Rees, and
+  T.~Kovacikova.
+\newblock Grid/cloud computing interoperability, standardization and the next
+  generation network (ngn).
+\newblock In {\em Intelligence in Next Generation Networks, 2009. ICIN 2009.
+  13th International Conference on}, pages 1--6, 2009.
+
+\bibitem{chandra2013decentralized}
+Abhishek Chandra, Jon Weissman, and Benjamin Heintz.
+\newblock Decentralized edge clouds.
+\newblock {\em Internet Computing, IEEE}, 17(5):70--73, 2013.
+
+\bibitem{chowdhury2009network}
+NM~Mosharaf~Kabir Chowdhury and Raouf Boutaba.
+\newblock Network virtualization: state of the art and research challenges.
+\newblock {\em Communications Magazine, IEEE}, 47(7):20--26, 2009.
+
+\bibitem{6144211}
+M.A.F. Gutierrez and N.~Ventura.
+\newblock Mobile cloud computing based on service oriented architecture:
+  Embracing network as a service for 3rd party application service providers.
+\newblock In {\em Kaleidoscope 2011: The Fully Networked Human? - Innovations
+  for Future Networks and Services (K-2011), Proceedings of ITU}, pages 1--7,
+  2011.
+
+\bibitem{liu2001traffic}
+Zhen Liu, Nicolas Niclausse, and C{\'e}sar Jalpa-Villanueva.
+\newblock Traffic model and performance evaluation of web servers.
+\newblock {\em Performance Evaluation}, 46(2):77--100, 2001.
+
+\bibitem{melzercloud}
+Jordan Melzer.
+\newblock Cloud radio access networks.
+
+\bibitem{6156350}
+S.~Pal and T.~Pal.
+\newblock Tsaas; customized telecom app hosting on cloud.
+\newblock In {\em Internet Multimedia Systems Architecture and Application
+  (IMSAA), 2011 IEEE 5th International Conference on}, pages 1--6, 2011.
+
+\bibitem{5634134}
+G.~Piro, L.A. Grieco, G.~Boggia, F.~Capozzi, and P.~Camarda.
+\newblock Simulating lte cellular systems: An open-source framework.
+\newblock {\em Vehicular Technology, IEEE Transactions on}, 60(2):498--513, Feb
+  2011.
+
+\bibitem{1437087}
+L.~Ramaswamy, Ling Liu, and A.~Iyengar.
+\newblock Cache clouds: Cooperative caching of dynamic documents in edge
+  networks.
+\newblock In {\em Distributed Computing Systems, 2005. ICDCS 2005. Proceedings.
+  25th IEEE International Conference on}, pages 229--238, June 2005.
+
+\end{thebibliography}
