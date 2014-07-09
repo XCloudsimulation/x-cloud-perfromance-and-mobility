@@ -1,2 +1,18 @@
 \section{Experiments}
+The aformentioned model was implemented in java employing simJava \cite{SimJava} as the event driven framework. With the constitient models implemented as modules into the event driven framework.
 
+In order to reveal the dynamics between the the number of users, placement of the data centers, and the number for services. The ssimulation is split up into 3 dimensions. As a result, simulation were performed for a population of \ues $N_{\ues}$ ranging from 10 to 500 \ues at intervals of 10 \ues. Additionally, for each run of $N_{\ues}$ the number of services $N_{services}$ and the placement of the data centers varied. The network spans $N_{\rbs}$ 9 radio access nodes.
+
+The \dc service time $T_{service}$ is set proportional to the mean request generation reate over the numer of  \rbss, and the number of VMs running on the ith \dc $N{i,vm}$, see Equation \ref{eq:service_time}.
+
+\begin{equation}
+
+\label{eq:service_time}
+\caption{\Dc service time for the jth VM in the ith \dc}
+
+T_{i,j,vm} = K \cdot N{i,vm} \cdot \frac{\overline{\lambda}}{N_{\rbs}}
+
+\end{equation}
+
+
+Each simulation run is idependantly replicated 10 times.

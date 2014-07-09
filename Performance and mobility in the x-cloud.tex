@@ -7,6 +7,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{float}
@@ -53,6 +54,16 @@ Email: jakub@cs.umu.se}}
 In an \xcloud{} topology the cloud resources are geographically dispersed throughout the mobile network. Services are actively located with close proximity to the \ue. Georgraphically migrating a service from \dc{} to \dc{} with its \ue{} imposes a load on the affected \dcs. Consequently, \ue{} mobility provides a fundamental problem to the \xcloud{} paradigm.
 
 This paper determines the fundamental service performance issues in system of mobile users with disperead data centres, in relation to the placement of the \xcloud{} host nodes and explores the \ue{} and provider utility of subscribing to an \xcloud{} node at a certain network depth.
+
+\begin{equation}
+
+\label{eq:service_time}
+\caption{\Dc service time for the jth VM in the ith \dc}
+
+T_{i,j,vm} = K \cdot N{i,vm} \cdot \frac{\overline{\lambda}}{N_{\rbs}}
+
+\end{equation}
+
 \end{abstract}
 
 \begin{keywords} 
