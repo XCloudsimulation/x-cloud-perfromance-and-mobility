@@ -1,12 +1,12 @@
 \subsection{\Dc}
 \begin{figure}[tb]
 	\centering
-	\includegraphics[width=\linewidth]{dc_model.jpg} 
+	\includegraphics[width=\linewidth]{dc_model.eps} 
 	\caption{Performance model}
 	\label{fig:performance_model}`
 \end{figure}
 
-To simplify the model of a \dc{} we will not consider CPU, memory, storage and intra \dc network separately.
+To simplify the model of a \dc{} we will not consider CPU, memory, storage and intra \dc{} network separately.
 Instead, in this paper, we will use an abstraction of one dimensional computational resource.
 
 Hosting VMs in a \dc{} can be modeled in two ways: with or without competition for computational resource.
@@ -35,20 +35,19 @@ Primarily, during the phase of transferring the image of VM, because of using a 
 Additionally, in the case of the postcopy migration, delay occurs also for some time after redirecting the workload to the new \dc{}, due to the remote memory calls.
 
 %That can be modeled by running two instances of VM during the time of migration, one per each DC.
-When VMs compete for resources, running additional VM on the destination side introduces an overhead by increasing the response time of other collocated VMs.  
+When VMs compete for resources, running additional VM on the destination side introduces an overhead by increasing the response time of other collocated VMs.
 
-\subsubsection{Possible service hosting schemes}
+\subsubsection{VM migration schemes}
 
-\begin{itemize}
-\item One service model, one VM is employed to host that service for each user.
-\item One service model, each VM hosts multiple but each number of users, behaving as multiple services while still being compatible.
-\end{itemize}
+\begin{description}
+\item[Pre copy] VM copied premptively before going live.
+\item[Post copy] VM is coped after receving VM assumes resposibility.
+\end{description}
 
+\subsubsection{VM placement and \dc{} provisioning schemes}
+To understand the effects of various migration schemes on the \dc and service performance, the following migration schemes were deployed:
 
-At all placement modes:
-\begin{itemize}
-\item Measure RTT for all packets at UE
-\item Measure DC load
-\item Measure ratio of requests generated vs. processed in \xcloud node
-\item Identify the incurred VM migration load
-\end{itemize}
+\begin{description}
+\item[Majority] A VM for service $S_j$, if active, residec in the \dc with the largest number of subscribers. If this criteria were to change the the hosting VM will migrate to the resulting \dc.
+\item[Distributed] Each \dc that hosts a \ue that subscribes to $S_j$ hosts an instance of a service $S_j$ VM. If users disperse, the VM for service $S_j$ will duplicat to the receiving \dc.
+\end{description}

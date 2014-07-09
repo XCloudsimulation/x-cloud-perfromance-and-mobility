@@ -5,6 +5,11 @@ The style file: plain.bst
 Database file #1: references.bib
 Warning--entry type for "SimJava" isn't style-file defined
 --line 1649 of file references.bib
+I was expecting a `,' or a `}'---line 1655 of file references.bib
+ :   
+ :   organization = {School of Infomatics, University of Edinburgh},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in EricssonWhitePaper
 Warning--to sort, need author or key in SimJava
 Warning--empty author in EricssonWhitePaper
@@ -12,16 +17,16 @@ Warning--empty journal in melzercloud
 Warning--empty year in melzercloud
 You've used 16 entries,
             2118 wiz_defined-function locations,
-            598 strings with 7070 characters,
-and the built_in function-call counts, 5623 in all, are:
-= -- 540
+            599 strings with 7116 characters,
+and the built_in function-call counts, 5632 in all, are:
+= -- 542
 > -- 261
 < -- 6
 + -- 105
 - -- 88
 * -- 401
-:= -- 896
-add.period$ -- 46
+:= -- 898
+add.period$ -- 47
 call.type$ -- 16
 change.case$ -- 93
 chr.to.int$ -- 0
@@ -29,17 +34,17 @@ cite$ -- 21
 duplicate$ -- 220
 empty$ -- 456
 format.name$ -- 88
-if$ -- 1206
+if$ -- 1208
 int.to.chr$ -- 0
 int.to.str$ -- 16
 missing$ -- 13
-newline$ -- 80
+newline$ -- 81
 num.names$ -- 28
 pop$ -- 109
 preamble$ -- 1
 purify$ -- 76
 quote$ -- 0
-skip$ -- 164
+skip$ -- 163
 stack$ -- 0
 substring$ -- 320
 swap$ -- 57
@@ -50,5 +55,5 @@ type$ -- 64
 warning$ -- 5
 while$ -- 52
 width$ -- 18
-write$ -- 171
-(There were 6 warnings)
+write$ -- 173
+(There was 1 error message)
