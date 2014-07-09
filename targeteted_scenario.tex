@@ -1,5 +1,7 @@
 \section{Desired model}
 
+The desiard model will provide a setting for which we can explore fundamental resource and performance properties of the \xcloud in a system of mobile \ues. The mobile \ues, radio access network, and service application will subject the \dcs with a load characteristic of generic mobile phone traffic and the type of services that might be deployed to the \xcloud.
+
 \begin{figure}[tb]
 	\centering
 	\includegraphics[width=\linewidth]{desiard_model.eps} 
@@ -7,12 +9,12 @@
 	\label{fig:performance_model}`
 \end{figure}
 
-As the topology of any future \xcloud and forthcoming proposed mobile networks is yet to be determined, in this paper we propose a generic telecom infrastucture model that disregards from specific generational properites such as the physical layer and cell load-balancing. Nevertheless, conceivably and in order to confine the geographic domain of the model it adheres to current LTE cell plannig pracices. 
+As the topology of any future \xcloud or proposed forthcoming mobile networks is yet to be determined, in this paper we propose a generic telecom infrastucture model that disregards generational specific properites such as those found in the physical layer and cell load-balancing methods. Nevertheless, conceivably and in order to confine the geographic domain of the model adheres to current general LTE cell plannig pracices. 
 
-In order to explore the fundamental dynamics of the generic case, as such, the model does not adhere to any soci-demographic patterns or urban topologies. The mobile network base tstaions are therefore uniformly distributed across its 2-dimensional domain.
+In order to explore the fundamental dynamics of mobility in the generic case, the model does not adhere to any soci-demographic patterns or urban topologies. To teh same effect, the mobile network base tstaions are  uniformly distributed across its 2-dimensional domain.
 
-Similarly, in order to represent the breth of possible services, the service model needs to generate traffic that is characteristic of a generic \ue. Additionally, the generated traffic needs to be provided by a stochastic process that is indepedant of location.
+Similarly, in order to represent the breth of possible services, the service model needs to generate traffic that is characteristic of a generic \ue. Additionally, the generated traffic shall therefore be provided by a stochastic process that is also indepedant of location.
 
-The concert of the mobility model and the service model in a uniformly distributed mobile network will provide the modeled \dcs with relevant request patterns. It is worth reitterating that the traffic load is more relevant to our investigation than specific topological and network properties.
+The concert of the mobility model and the service model in a uniformly distributed mobile network that will provide the modeled \dcs with relevant request load. It is worth reitterating that the traffic load is more relevant to our investigation than specific topological and network properties.
 
-The \dc model will host multiple VM that will process the arriving requets corresponding to its service commitment. Additionally when a VM is migrated between \dcs it shall incurr a load on the both \dcs.
+The \dc model will host multiple VM that will process the arriving requets corresponding to its service commitment. Additionally, when a VM is migrated between \dcs it shall incurr a load on the both \dcs. Furthermore, the resources within a \dc are shared amongst the reciding VMs, the proportional amount of compute resources dedicated to one service is thus proportional to the number of services hosted in that \dc.  Minute memmory management, interferance, and corss-talk are not fundamental performance properties at this scake and are therefore not modelled.
