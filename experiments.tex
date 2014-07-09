@@ -1,13 +1,38 @@
 \section{Experiments}
 The aformentioned model was implemented in java employing simJava \cite{SimJava} as the event driven framework. With the constitient models implemented as modules into the event driven framework.
 
-In order to reveal the dynamics between the the number of users, placement of the data centers, and the number for services. The simulation is split up into 3 dimensions. To that effect, simulations were performed for a population of \ues $N_{ue}$ ranging from 10 to 500 \ues at intervals of 10 \ues. Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ and the placement of the data centers varied. The network spans $N_{rbs}$ 9 radio access nodes.
+In order to reveal the dynamics between the the number of users, placement of the data centers, and the number for services. The simulation is split up into 3 dimensions. To that effect, simulations were performed for a population of \ues $N_{ue}$ ranging from 10 to 500 \ues at intervals of 10 \ues. Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ and the placement of the data centers was varied. The network spans 9 radio access nodes, $N_{rbs}$.
 
-The \dc service time $T_{service}$ is set proportional to the mean request generation reate over the numer of  \rbss, and the number of VMs running on the ith \dc $N{i,vm}$, see Equation \ref{eq:service_time}.
+To understand the effects of various migration schemes on the \dc and service performance, the following migration schemes were deployed:
+
+\begin{description}
+\item[Majority] A VM for service $S_j$, if active, residec in the \dc with the largest number of subscribers. If this criteria were to change the the hosting VM will migrate to the resulting \dc.
+\item[Distributed] A VM hosting service $S_j$ residec in each \dc that hosts a user that subscribes to that service.
+\end{description}
+
+For each of these scenarios the simulation reveals how often the serivce recides in each \dc, how many times one service is started and stoped in each \dc, and how how much service latency is incurred by starting and stopping a service throughout the simulation.
+
+The \dc service time $T_{service}$ is set proportional to the mean request generation rate over the number of \rbss, and the number of VMs running on the ith \dc $N{i,vm}$, see Equation \ref{eq:service_time}.
 
 \begin{equation}
 \label{eq:service_time}
 T_{i,j,vm} = K \cdot N_{i,vm} \cdot \frac{ \bar{\lambda}_{sys} }{N_{rbs}}
 \end{equation}
 
-Each simulation run is idependantly replicated 10 times.
+\begin{table}[tb]
+ 	\centering
+ 	
+    \begin{tabular}{|l|l|} \hline
+    	\textbf{Parameter}    		& \textbf{Value} \\ \hline
+    	$N_{ue}$					& \\ \hline
+    	$N_{rbs}$     				& \\ \hline
+    	$N_{ser}$ 					& \\ \hline
+    	$T_{ser}$  					& \\ \hline
+    	$T_{sim}$ 					& \\ \hline
+    \end{tabular}
+    
+    \caption{Simulation parameter values}
+    \label{table:simulation_parameters}
+\end{table}
+
+To ensure statistical accuracy, each simulation run is idependantly replicated 10 times.
