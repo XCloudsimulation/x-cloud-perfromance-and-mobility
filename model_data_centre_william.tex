@@ -1,0 +1,57 @@
+\subsection{\Dc}
+\begin{figure}[tb]
+	\centering
+	\includegraphics[width=\linewidth]{dc_model.eps} 
+	\caption{Performance model}
+	\label{fig:performance_model}
+\end{figure}
+
+To simplify the model of a \dc{} we will not consider CPU, memory, storage and intra \dc{} network separately.
+Instead, in this paper, we will use an abstraction of one dimensional computational resource.
+
+Hosting VMs in a \dc{} can be modeled in two ways: with or without competition for computational resource.
+
+In the first approach, the resources of a \dc{} are aggregated in one pool that is continuously divisible.
+%Each VM gets an equal part of available resources inversely proportional to the number of VMs hosted in the data center.
+%The bigger is the number of VMs hosted in the \dc{}, the smaller amount of resources each of them gets.
+The pool of resources is divided evenly among all VMs.
+Hence, when the number of VMs hosted in the \dc{} increases, the amount of resources available for each VM shrinks.
+Consequently the service time of processing requests of each VM lengthens.
+
+In the second approach, the resources of a \dc{} are discrete and each computational unit is used exclusively by one VM.
+Therefore, there is no influence of one VM on another.
+To incorporate the fact that the amount of resources is finite we put a limit on the maximal number of VMs that can be hosted in one \dc{}. Furthermore, on each \dc each service is contained within one VM. 
+
+The \dc{} is modeled with as series of parallel queues, one for each alotted VM, and thus, service $N_{i,vm}$. A dispatecher directs incoming requests to the corresponding VM based on which service $S_j$ it carries. In normal operation, each request is served by each queue with a service time of $T_{i,vm}$, uniqie to the ith \dc{} and is proprtional to the number of VMs $N_{i,vm}$ running concurrently in the \dc{}. When the queue in a VM or subset of VMs in a \dc{} $N_{i,sus vm} \subset N_{i,vm}$ are temprarily empty, the remaining VMs will be rewarded with a reduction in service time propotinal the number of suspended VMs $T_{sus} \propto N_{i,sus vm}$.
+
+\subsubsection{Overhead of VM start, stop, and migration}
+When a request from a previously unknown service $S_j$ is serverd to a \dc{}, a new VM will be started to host that service. Due to startup times the VM will not be able to start processing requests for a period of $T_{vm init}$. Nevertheless, the base VM service time for the \dc{} $T_{i,vm}$, will be adjusted to the for the new VM count.
+
+Migration has an influence on the service performance as well as on the resource availability on both source and destination \dc{}.
+On the source side, apart from ordinary resource requirements due to serving requests, VM consumes resources for sending its image to the destination \dc{}.
+In a case of postcopy live migration, VM at the source side still uses some resources even after the workload is redirected to the new location.
+That is because the VM at destination side pulls remaining memory pages from the source \dc{}.
+
+%The overhead of VM migration can be modeled in different ways depending on the manner how \dc resources are represented.
+
+To model the overhead of migration on the service performance additional delay in the response time should be introduced.
+Primarily, during the phase of transferring the image of VM, because of using a part of resources for I/O operations.
+Additionally, in the case of the postcopy migration, delay occurs also for some time after redirecting the workload to the new \dc{}, due to the remote memory calls.
+
+%That can be modeled by running two instances of VM during the time of migration, one per each DC.
+When VMs compete for resources, running additional VM on the destination side introduces an overhead by increasing the response time of other collocated VMs.
+
+\subsubsection{VM migration schemes}
+
+\begin{description}
+\item[Pre copy] VM copied premptively before going live.
+\item[Post copy] VM is coped after receving VM assumes resposibility.
+\end{description}
+
+\subsubsection{VM placement and \dc{} provisioning schemes}
+To understand the effects of various migration schemes on the \dc and service performance, the following migration schemes were deployed:
+
+\begin{description}
+\item[Majority] A VM for service $S_j$, if active, residec in the \dc with the largest number of subscribers. If this criteria were to change the the hosting VM will migrate to the resulting \dc.
+\item[Distributed] Each \dc that hosts a \ue that subscribes to $S_j$ hosts an instance of a service $S_j$ VM. If users disperse, the VM for service $S_j$ will duplicat to the receiving \dc.
+\end{description}
