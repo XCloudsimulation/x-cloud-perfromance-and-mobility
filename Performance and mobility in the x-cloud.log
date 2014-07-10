@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.4.25)  10 JUL 2014 16:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.4.25)  10 JUL 2014 16:40
 entering extended mode
 **Performance*and*mobility*in*the*x-cloud.tex
 
@@ -979,13 +979,12 @@ ion.tex
 (\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\model_s
 ervice.tex)
 (\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\model_m
-obilty.tex)
+obilty.tex [2 <//osiris/users/eit-wit/Desktop/GitHub/x-cloud-perfromance-and-mo
+bility/desiard_model-eps-converted-to.pdf>])
 (\\osiris\users\eit-wit\Desktop\GitHub\x-cloud-perfromance-and-mobility\model_m
-obile_network.tex [2 <//osiris/users/eit-wit/Desktop/GitHub/x-cloud-perfromance
--and-mobility/desiard_model-eps-converted-to.pdf>]
+obile_network.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 2.
@@ -1052,13 +1051,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 15530 strings out of 493921
- 298099 string characters out of 3147276
- 351023 words of memory out of 3000000
+ 15529 strings out of 493921
+ 298093 string characters out of 3147276
+ 350023 words of memory out of 3000000
  18453 multiletter control sequences out of 15000+200000
- 42234 words of font info for 86 fonts, out of 3000000 for 9000
+ 41127 words of font info for 85 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 55i,14n,54p,1064b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,14n,54p,1172b,334s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX
  2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Files/MiKTeX 2.9/font
@@ -1068,8 +1067,8 @@ fonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.p
 fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Program F
 iles/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/urw/times/utmri8a.pfb>
-Output written on "Performance and mobility in the x-cloud.pdf" (5 pages, 20735
-8 bytes).
+Output written on "Performance and mobility in the x-cloud.pdf" (5 pages, 20759
+5 bytes).
 PDF statistics:
  105 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
