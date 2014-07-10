@@ -1,17 +1,19 @@
 \section{Experiments}
 The aforementioned model was implemented in Java employing simjava \cite{SimJava} as the event driven framework. With the constituent models implemented as modules into the event driven framework.
 
-\subsubsection{Service performance and mobility}
+\subsection{Service performance and mobility}
 
 In order to reveal the dynamics between the the number of users, placement of the data centres, and the number for services. The simulation is split up into 3 dimensions. To that effect, simulations were performed for a population of \ues{} $N_{ue}$ ranging from 10 to 500 \ues{} at intervals of 10 \ues{}. Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ and the placement of the data centres was varied. The network spans 9 radio access nodes, $N_{rbs}$.
 
-For each above mentioned simulation scenario, service latency is measured in each \ue{}, and VM migration/duplication resources in the \dc{}.
+For each above mentioned simulation scenario, service latency is measured in each \ue{}, and VM migration/duplication resource usge in the \dc{}. Resource usage in the \dcs{} is expressed as the quotient of the time spent migrating over the total execution time.
 
-\subsubsection{VM migration schemes}
+\subsection{VM migration schemes}
 For each scenarios the simulation reveals how often the service resides in each \dc{}, how many times one service is started and stopped in each \dc{}, and how how much service latency is incurred by starting and stopping a service throughout the simulation.
 
-\subsubsection{Global parameters and principals}
-The \dc{} service time for the ith \dc{} $T_{i,vm}$ is set proportional to the mean request generation rate over the number of \rbss{}, and the number of VMs running on the ith \dc{} $N{i,vm}$, see Equation \ref{eq:service_time}.
+\subsection{Global parameters and principals}
+The \dc{} service time for the ith \dc{} $T_{i,vm}$ is set proportional to the mean request generation rate over the number of \rbss{}, and the number of VMs running on the ith \dc{} $N{i,vm}$, see Equation \ref{eq:service_time}. The framework provides a breakdown of the 
+
+As mentioned previously, the mobile network is seen as a point of access, and that we dissregard channel propagation delay as it is not a variable in the \xcloud system as defined in this paper. Nevertheless, in order to appoint a penalty for intra-\dc{} geographic discrepacy, the core network imposes a Weibull distributed ms delay on intra-\dc{} communication, in multiples of the number of hops, with parameters $\alpha=0.5, \beta=0.6$.
 
 Simulation model parameters used in the experiments can be found in Table \ref{table:simulation_parameters}, likewise the service parameters are declared in Table \ref{table:traffic_parameters}.
 

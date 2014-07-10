@@ -84,6 +84,14 @@ S.~Pal and T.~Pal.
 \newblock In {\em Internet Multimedia Systems Architecture and Application
   (IMSAA), 2011 IEEE 5th International Conference on}, pages 1--6, 2011.
 
+\bibitem{papagiannaki2003measurement}
+Konstantina Papagiannaki, Sue Moon, Chuck Fraleigh, Patrick Thiran, and
+  Christophe Diot.
+\newblock Measurement and analysis of single-hop delay on an ip backbone
+  network.
+\newblock {\em Selected Areas in Communications, IEEE Journal on},
+  21(6):908--921, 2003.
+
 \bibitem{5634134}
 G.~Piro, L.A. Grieco, G.~Boggia, F.~Capozzi, and P.~Camarda.
 \newblock Simulating lte cellular systems: An open-source framework.
