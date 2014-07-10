@@ -1,4 +1,6 @@
-This is BibTeX, Version 0.99dThe top-level auxiliary file: Performance and mobility in the x-cloud.aux
+This is BibTeX, Version 0.99d (TeX Live 2012)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Performance and mobility in the x-cloud.aux
 The style file: plain.bst
 Database file #1: references.bib
 Warning--entry type for "SimJava" isn't style-file defined
@@ -17,4 +19,45 @@ Warning--to sort, need author or key in SimJava
 Warning--empty author in EricssonWhitePaper
 Warning--empty journal in melzercloud
 Warning--empty year in melzercloud
+You've used 16 entries,
+            2118 wiz_defined-function locations,
+            600 strings with 7187 characters,
+and the built_in function-call counts, 5640 in all, are:
+= -- 545
+> -- 261
+< -- 6
++ -- 105
+- -- 88
+* -- 400
+:= -- 899
+add.period$ -- 47
+call.type$ -- 16
+change.case$ -- 93
+chr.to.int$ -- 0
+cite$ -- 21
+duplicate$ -- 220
+empty$ -- 456
+format.name$ -- 88
+if$ -- 1208
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 13
+newline$ -- 81
+num.names$ -- 28
+pop$ -- 109
+preamble$ -- 1
+purify$ -- 76
+quote$ -- 0
+skip$ -- 163
+stack$ -- 0
+substring$ -- 324
+swap$ -- 57
+text.length$ -- 6
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 64
+warning$ -- 5
+while$ -- 53
+width$ -- 18
+write$ -- 173
 (There were 2 error messages)

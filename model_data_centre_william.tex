@@ -1,10 +1,15 @@
 \subsection{\Dc}
 \begin{figure}[tb]
 	\centering
-	\includegraphics[width=\linewidth]{dc_model.eps} 
+	\includegraphics[width=\linewidth]{fig_dc_model.eps} 
 	\caption{\Dc{} model}
 	\label{fig:dc_model}
 \end{figure}
+
+As illustrated in Figure \ref{fig:dc_model}, \dc{} is modeled with as series of parallel queues, one for each allotted VM, and thus, service $N_{i,vm}$. 
+A dispatcher directs incoming requests to the corresponding VM based on which service $S_j$ it carries. 
+In normal operation, each request is served by each queue with a service time of $T_{i,vm}$, unique to the $i_{th}$ \dc{} and is proportional to the number of VMs $N_{i,vm}$ running concurrently in the \dc{}.
+%When the queue in a VM or subset of VMs in a \dc{} $N_{i,sus vm} \subset N_{i,vm}$ are temprarily empty, the remaining VMs will be rewarded with a reduction in service time propotinal the number of suspended VMs $T_{sus} \propto N_{i,sus vm}$.
 
 To simplify the model of a \dc{} we will not consider CPU, memory, storage and intra \dc{} network separately.
 Instead, in this paper, we will use an abstraction of one dimensional computational resource.
@@ -22,11 +27,6 @@ In the second approach, the resources of a \dc{} are discrete and each computati
 Therefore, there is no influence of one VM on another.
 To incorporate the fact that the amount of resources is finite we put a limit on the maximal number of VMs that can be hosted in one \dc{}.
 Furthermore, on each \dc each service is contained within one VM. 
-
-As illustrated in Figure \ref{fig:dc_model}, \dc{} is modeled with as series of parallel queues, one for each allotted VM, and thus, service $N_{i,vm}$. 
-A dispatcher directs incoming requests to the corresponding VM based on which service $S_j$ it carries. 
-In normal operation, each request is served by each queue with a service time of $T_{i,vm}$, unique to the $i_{th}$ \dc{} and is proportional to the number of VMs $N_{i,vm}$ running concurrently in the \dc{}.
-%When the queue in a VM or subset of VMs in a \dc{} $N_{i,sus vm} \subset N_{i,vm}$ are temprarily empty, the remaining VMs will be rewarded with a reduction in service time propotinal the number of suspended VMs $T_{sus} \propto N_{i,sus vm}$.
 
 %\subsubsection{Overhead of VM start, stop, and migration}
 \subsubsection{Overhead of VM initialization and migration}
@@ -53,18 +53,3 @@ Additionally, in the case of the postcopy migration, delay  $D_{memory\_pull}$ o
 
 %That can be modeled by running two instances of VM during the time of migration, one per each DC.
 When VMs compete for resources, running additional VM on the destination side introduces an overhead by increasing the response time of other collocated VMs.
-
-\subsubsection{VM migration schemes}
-
-\begin{description}
-\item[Pre copy] VM copied premptively before going live.
-\item[Post copy] VM is coped after receving VM assumes resposibility.
-\end{description}
-
-\subsubsection{VM placement and \dc{} provisioning schemes}
-To understand the effects of various migration schemes on the \dc and service performance, the following migration schemes were deployed:
-
-\begin{description}
-\item[Majority] A VM for service $S_j$, if active, residec in the \dc with the largest number of subscribers. If this criteria were to change the the hosting VM will migrate to the resulting \dc.
-\item[Distributed] Each \dc that hosts a \ue that subscribes to $S_j$ hosts an instance of a service $S_j$ VM. If users disperse, the VM for service $S_j$ will duplicat to the receiving \dc.
-\end{description}

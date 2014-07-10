@@ -1,6 +1,17 @@
 \section{Future research}
 
+\subsection{VM migration schemes}
 \begin{itemize}
-\item \Dc{} provisioning and service/VM migration/placement schemes in the \xcloud{}.
-\item Multi-tierd service placemet scehemes in the \xcloud{}.
+\item \textbf{Pre copy} VM copied premptively before going live.
+\item \textbf{Post copy} VM is coped after receving VM assumes resposibility.
 \end{itemize}
+
+\subsection{VM placement and \dc{} provisioning schemes}
+To understand the effects of various migration schemes on the \dc and service performance, the following migration schemes were deployed:
+
+\begin{itemize}
+\item A VM for service $S_j$, if active, residec in the \dc with the largest number of subscribers. If this criteria were to change the the hosting VM will migrate to the resulting \dc.
+\item Each \dc that hosts a \ue that subscribes to $S_j$ hosts an instance of a service $S_j$ VM. If users disperse, the VM for service $S_j$ will duplicat to the receiving \dc.
+\end{itemize}
+
+\subsection{Multi-tierd service placemet schemes in the \xcloud{}}
