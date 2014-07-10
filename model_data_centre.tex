@@ -26,7 +26,7 @@ To incorporate the fact that the amount of resources is finite we put a limit on
 Migration has an influence on the service performance as well as on the resource availability on both source and destination \dc{}.
 On the source side, apart from ordinary resource requirements due to serving requests, VM consumes resources for sending its image to the destination \dc{}.
 In a case of postcopy live migration, VM at the source side still uses some resources even after the workload is redirected to the new location.
-That is because the VM at destination side pulls remaining memory pages from the source \dc{}.
+That is because the VM at the destination side pulls remaining memory pages from the source \dc{}.
 
 %The overhead of VM migration can be modeled in different ways depending on the manner how \dc resources are represented.
 
