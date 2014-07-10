@@ -20,23 +20,36 @@ Consequently the service time of processing requests of each VM lengthens.
 
 In the second approach, the resources of a \dc{} are discrete and each computational unit is used exclusively by one VM.
 Therefore, there is no influence of one VM on another.
-To incorporate the fact that the amount of resources is finite we put a limit on the maximal number of VMs that can be hosted in one \dc{}. Furthermore, on each \dc each service is contained within one VM. 
+To incorporate the fact that the amount of resources is finite we put a limit on the maximal number of VMs that can be hosted in one \dc{}.
+Furthermore, on each \dc each service is contained within one VM. 
 
-The \dc{} is modeled with as series of parallel queues, one for each alotted VM, and thus, service $N_{i,vm}$. A dispatecher directs incoming requests to the corresponding VM based on which service $S_j$ it carries. In normal operation, each request is served by each queue with a service time of $T_{i,vm}$, uniqie to the ith \dc{} and is proprtional to the number of VMs $N_{i,vm}$ running concurrently in the \dc{}. %When the queue in a VM or subset of VMs in a \dc{} $N_{i,sus vm} \subset N_{i,vm}$ are temprarily empty, the remaining VMs will be rewarded with a reduction in service time propotinal the number of suspended VMs $T_{sus} \propto N_{i,sus vm}$.
+The \dc{} is modeled with as series of parallel queues, one for each allotted VM, and thus, service $N_{i,vm}$. 
+A dispatcher directs incoming requests to the corresponding VM based on which service $S_j$ it carries. 
+In normal operation, each request is served by each queue with a service time of $T_{i,vm}$, unique to the $i_{th}$ \dc{} and is proportional to the number of VMs $N_{i,vm}$ running concurrently in the \dc{}.
+%When the queue in a VM or subset of VMs in a \dc{} $N_{i,sus vm} \subset N_{i,vm}$ are temprarily empty, the remaining VMs will be rewarded with a reduction in service time propotinal the number of suspended VMs $T_{sus} \propto N_{i,sus vm}$.
 
-\subsubsection{Overhead of VM start, stop, and migration}
-When a request from a previously unknown service $S_j$ is serverd to a \dc{}, a new VM will be started to host that service. Due to startup times the VM will not be able to start processing requests for a period of $T_{vm init}$. Nevertheless, the base VM service time for the \dc{} $T_{i,vm}$, will be adjusted to the for the new VM count.
+%\subsubsection{Overhead of VM start, stop, and migration}
+\subsubsection{Overhead of VM initialization and migration}
+%When a request from a previously unknown service $S_j$ is served to a \dc{}, a new VM will be started to host that service.
+When a decision of deploying a new service in a \dc{} is taken, a new VM will be started there to host that service.
+Due to the startup time, the newly admitted VM will not be able to start processing requests for a period of $T_{vm\_init}$. 
+%Nevertheless, the base VM service time for the \dc{} $T_{i,vm}$, will be adjusted to the for the new VM count.
+Nevertheless, the new VM will start using resources of the \dc{} from the time of admission.
+Because of that, the service time, $T_{i,vm}$, for each of the VMs hosted in that \dc{} will be recalculated at that point.
 
 Migration has an influence on the service performance as well as on the resource availability on both source and destination \dc{}.
 On the source side, apart from ordinary resource requirements due to serving requests, VM consumes resources for sending its image to the destination \dc{}.
 In a case of postcopy live migration, VM at the source side still uses some resources even after the workload is redirected to the new location.
-That is because the VM at destination side pulls remaining memory pages from the source \dc{}.
+That is because the VM at the destination side pulls remaining memory pages from the source \dc{}.
 
 %The overhead of VM migration can be modeled in different ways depending on the manner how \dc resources are represented.
 
 To model the overhead of migration on the service performance additional delay in the response time should be introduced.
-Primarily, during the phase of transferring the image of VM, because of using a part of resources for I/O operations.
-Additionally, in the case of the postcopy migration, delay occurs also for some time after redirecting the workload to the new \dc{}, due to the remote memory calls.
+%Primarily, during the phase of transferring the image of VM, because of using a part of resources for I/O operations.
+Primarily, for the time of transferring the image of VM, $T_{vm\_transfer}$, the time of serving a request should be lengthen by $D_{vm\_transfer}$, because of using a part of resources for I/O operations.
+Moreover, during the time of switching the execution from the source to the destination, $T_{vm\_downtime}$, VM is not able to serve any requests.
+%Additionally, in the case of the postcopy migration, delay occurs also for some time after redirecting the workload to the new \dc{}, due to the remote memory calls.
+Additionally, in the case of the postcopy migration, delay  $D_{memory\_pull}$ occurs for some number, $N_{memory\_pull}$, of the first requests after redirecting the workload to the new \dc{}, due to the remote memory calls.
 
 %That can be modeled by running two instances of VM during the time of migration, one per each DC.
 When VMs compete for resources, running additional VM on the destination side introduces an overhead by increasing the response time of other collocated VMs.
