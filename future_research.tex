@@ -2,8 +2,8 @@
 
 \subsection{VM migration schemes}
 \begin{itemize}
-\item \textbf{Pre copy} VM copied premptively before going live.
-\item \textbf{Post copy} VM is coped after receving VM assumes resposibility.
+\item \textbf{Precopy} --- the whole memory of VM is copied preemptively before switching the execution to the new \dc{}.
+\item \textbf{Postcopy} --- the memory of VM is copied after switching the execution to the new \dc{} as is needed to serve the incoming requests.
 \end{itemize}
 
 \subsection{VM placement and \dc{} provisioning schemes}
