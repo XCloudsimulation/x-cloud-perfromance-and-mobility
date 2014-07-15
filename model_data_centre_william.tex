@@ -6,7 +6,7 @@
 	\label{fig:dc_model}
 \end{figure}
 
-As illustrated in Figure \ref{fig:dc_model}, \dc{} is modeled with as series of parallel queues, one for each allotted VM, and thus, service $N_{i,vm}$. 
+As illustrated in Figure \ref{fig:dc_model}, \dc{} is modelled as series of parallel queues, one for each allotted VM, and thus, service $N_{i,vm}$. 
 A dispatcher directs incoming requests to the corresponding VM based on which service $S_j$ it carries. 
 In normal operation, each request is served by each queue with a service time of $T_{i,vm}$, unique to the $i_{th}$ \dc{} and is proportional to the number of VMs $N_{i,vm}$ running concurrently in the \dc{}.
 %When the queue in a VM or subset of VMs in a \dc{} $N_{i,sus vm} \subset N_{i,vm}$ are temprarily empty, the remaining VMs will be rewarded with a reduction in service time propotinal the number of suspended VMs $T_{sus} \propto N_{i,sus vm}$.
