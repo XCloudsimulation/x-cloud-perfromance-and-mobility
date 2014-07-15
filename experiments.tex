@@ -1,33 +1,41 @@
 \section{Experiments}
 The aforementioned model was implemented in Java employing simjava \cite{SimJava} as the event driven framework. With the constituent models implemented as modules into the event driven framework.
 
-\subsubsection{Service performance and mobility}
-
-In order to reveal the dynamics between the the number of users, placement of the data centres, and the number for services. The simulation is split up into 3 dimensions. To that effect, simulations were performed for a population of \ues{} $N_{ue}$ ranging from 10 to 500 \ues{} at intervals of 10 \ues{}. Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ and the placement of the data centres was varied. The network spans 9 radio access nodes, $N_{rbs}$.
+\subsection{Service performance and mobility}
+In order to reveal the dynamics between the number of users, placement of the \dcs{}, and the number for services, the simulation was split up into 3 dimensions.
+To that effect, simulations were performed for a population of \ues{} $N_{ue}$ ranging from 10 to 500 \ues{} at intervals of 10 \ues{}.
+%Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ and the placement of the \dcs{} was varied. 
+Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ was varied between 1 and 5.
+Moreover, the number of \dcs{} $N_{dc}$ was changed between 16, 4 and 1, with each \dc{} serving 1, 4 or 16 \rbss{} respectively.
+%The network spans 9 radio access nodes, $N_{rbs}$.
+The network spans 16 radio access nodes, $N_{rbs}$.
 
 For each above mentioned simulation scenario, service latency is measured in each \ue{}, and VM migration/duplication resources in the \dc{}.
 
-\subsubsection{VM migration schemes}
+\subsection{VM migration schemes}
 For each scenarios the simulation reveals how often the service resides in each \dc{}, how many times one service is started and stopped in each \dc{}, and how how much service latency is incurred by starting and stopping a service throughout the simulation.
 
-\subsubsection{Global parameters and principals}
-The \dc{} service time for the ith \dc{} $T_{i,vm}$ is set proportional to the mean request generation rate over the number of \rbss{}, and the number of VMs running on the ith \dc{} $N_{i,vm}$, see Equation \ref{eq:service_time}.
+\subsection{Global parameters and principals}
+The service time for each \dc{} is set independently, proportional to the mean request generation rate over the number of \rbss{} and the number of VMs running, see Equation \ref{eq:service_time}.
+%The \dc{} service time for the ith \dc{} $T_{i,vm}$ is set proportional to the mean request generation rate over the number of \rbss{}, and the number of VMs running on the ith \dc{} $N_{i,vm}$, see Equation \ref{eq:service_time}.
 
-Simulation model parameters used in the experiments can be found in Table \ref{table:simulation_parameters}, likewise the service parameters are declared in Table \ref{table:traffic_parameters}.
+Simulation model parameters used in the experiments can be found in Table~\ref{table:simulation_parameters}, likewise the service parameters are declared in Table~\ref{table:traffic_parameters}.
 
 \begin{equation}
 \label{eq:service_time}
-T_{i,j,vm} = K \cdot N_{i,vm} \cdot \frac{ \bar{\lambda}_{sys} }{N_{rbs}}
+T_{i,j,vm} = K \cdot N_{i,vm} \cdot \frac{ \bar{\lambda}_{sys} }{N_{rbs}},
 \end{equation}
+where $i$, $j$, $vm$, $K$, $N_{i,vm}$, $\bar{\lambda}_{sys}$, $N_{rbs}$. 
 
 \begin{table}[tb]
  	\centering
  	
     \begin{tabular}{|l|l|} \hline
-    	\textbf{Parameter}    	& \textbf{Value} \\ \hline
-    	$N_{ue}$						& \\ \hline
-    	$N_{rbs}$						& \\ \hline
-    	$N_{ser}$						& \\ \hline
+    	\textbf{Parameter}    	& \textbf{Value}			\\ \hline
+    	$N_{ue}$						& 10--500 (step: 10)	\\ \hline
+    	$N_{rbs}$						& 16								\\ \hline
+    	$N_{dc}$						& $\{1,4,16\}$				\\ \hline
+    	$N_{ser}$						& 1--5							\\ \hline
     	$T_{ser}$						& \\ \hline
     	$T_{sim}$						& \\ \hline
     	$d_{rbs}$						& \\ \hline
