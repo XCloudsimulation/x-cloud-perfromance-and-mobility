@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2012)
+This is BibTeX, Version 0.99d (TeX Live 2013)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Performance and mobility in the x-cloud.aux
 The style file: plain.bst
@@ -19,45 +19,45 @@ Warning--to sort, need author or key in SimJava
 Warning--empty author in EricssonWhitePaper
 Warning--empty journal in melzercloud
 Warning--empty year in melzercloud
-You've used 16 entries,
+You've used 17 entries,
             2118 wiz_defined-function locations,
-            600 strings with 7187 characters,
-and the built_in function-call counts, 5640 in all, are:
-= -- 545
-> -- 261
+            606 strings with 7438 characters,
+and the built_in function-call counts, 6089 in all, are:
+= -- 585
+> -- 294
 < -- 6
-+ -- 105
-- -- 88
-* -- 400
-:= -- 899
-add.period$ -- 47
-call.type$ -- 16
-change.case$ -- 93
++ -- 118
+- -- 100
+* -- 444
+:= -- 977
+add.period$ -- 50
+call.type$ -- 17
+change.case$ -- 102
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 220
-empty$ -- 456
-format.name$ -- 88
-if$ -- 1208
+cite$ -- 22
+duplicate$ -- 231
+empty$ -- 483
+format.name$ -- 100
+if$ -- 1296
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 13
-newline$ -- 81
-num.names$ -- 28
-pop$ -- 109
+int.to.str$ -- 17
+missing$ -- 14
+newline$ -- 86
+num.names$ -- 30
+pop$ -- 116
 preamble$ -- 1
-purify$ -- 76
+purify$ -- 84
 quote$ -- 0
-skip$ -- 163
+skip$ -- 170
 stack$ -- 0
-substring$ -- 324
-swap$ -- 57
+substring$ -- 350
+swap$ -- 58
 text.length$ -- 6
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 64
+type$ -- 68
 warning$ -- 5
-while$ -- 53
-width$ -- 18
-write$ -- 173
+while$ -- 56
+width$ -- 19
+write$ -- 184
 (There were 2 error messages)

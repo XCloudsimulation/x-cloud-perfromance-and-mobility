@@ -5,15 +5,17 @@ The aforementioned model was implemented in Java employing simjava \cite{SimJava
 In order to reveal the dynamics between the number of users, placement of the \dcs{}, and the number for services, the simulation was split up into 3 dimensions.
 To that effect, simulations were performed for a population of \ues{} $N_{ue}$ ranging from 10 to 500 \ues{} at intervals of 10 \ues{}.
 %Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ and the placement of the \dcs{} was varied. 
+Moreover, the network spanned 16 \rbss{}, $N_{rbs}$ and the number of \dcs{} $N_{dc}$ was changed between 16, 4 and 1, with each \dc{} serving 1, 4 or 16 \rbss{} respectively.
 Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ was varied between 1 and 5.
-Moreover, the number of \dcs{} $N_{dc}$ was changed between 16, 4 and 1, with each \dc{} serving 1, 4 or 16 \rbss{} respectively.
 %The network spans 9 radio access nodes, $N_{rbs}$.
-The network spans 16 radio access nodes, $N_{rbs}$.
 
 For each above mentioned simulation scenario, service latency is measured in each \ue{}, and VM migration/duplication resources in the \dc{}.
 
-\subsection{VM migration schemes}
-For each scenarios the simulation reveals how often the service resides in each \dc{}, how many times one service is started and stopped in each \dc{}, and how how much service latency is incurred by starting and stopping a service throughout the simulation.
+\subsection{VM resource allocation/release}
+Times of resource allocation $T_{vm\_init}$ and release $T_{vm\_release}$ are set as measured for m1.small instance (1~vCPU, 1.7 GB of RAM and 160 GB disk) on Amazon EC2 \cite{5719609}. %http://aws.amazon.com/ec2/previous-generation/
+
+%\subsection{VM migration schemes}
+%For each scenarios the simulation reveals how often the service resides in each \dc{}, how many times one service is started and stopped in each \dc{}, and how how much service latency is incurred by starting and stopping a service throughout the simulation.
 
 \subsection{Global parameters and principals}
 The service time for each \dc{} is set independently, proportional to the mean request generation rate over the number of \rbss{} and the number of VMs running, see Equation \ref{eq:service_time}.
@@ -42,7 +44,8 @@ where $i$, $j$, $vm$, $K$, $N_{i,vm}$, $\bar{\lambda}_{sys}$, $N_{rbs}$.
     	$T_{net}$						& \\ \hline
         %$T_{sus}$						& \\ \hline
         %$N_{i,sus vm}$				& \\ \hline
-        $T_{vm\_init}$				& \\ \hline
+        $T_{vm\_init}$				& avg 82 s, min 69 s, max 126 s \\ \hline
+        $T_{vm\_release}$		& avg 21 s, min 18 s, max 23 s \\ \hline
         $T_{vm\_transfer}$		& \\ \hline
 		$D_{vm\_transfer}$		& \\ \hline
 		$T_{vm\_downtime}$	& \\ \hline

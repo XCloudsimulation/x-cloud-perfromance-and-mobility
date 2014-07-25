@@ -30,14 +30,37 @@ To incorporate the fact that the amount of resources is finite we put a limit on
 Furthermore, on each \dc each service is contained within one VM. 
 
 %\subsubsection{Overhead of VM start, stop, and migration}
-\subsubsection{Overhead of VM initialization and migration}
+%\subsubsection{Overhead of VM initialization and migration}
+\subsubsection{VM initialization and termination}
 %When a request from a previously unknown service $S_j$ is served to a \dc{}, a new VM will be started to host that service.
 When a decision of deploying a new service in a \dc{} is taken, a new VM will be started there to host that service.
 Due to the startup time, the newly admitted VM will not be able to start processing requests for a period of $T_{vm\_init}$. 
 %Nevertheless, the base VM service time for the \dc{} $T_{i,vm}$, will be adjusted to the for the new VM count.
 Nevertheless, the new VM will start using resources of the \dc{} from the time of admission.
 Because of that, the service time, $T_{i,vm}$, for each of the VMs hosted in that \dc{} will be recalculated at that point.
+Similarly, after finishing serving the last request, VM will be still using the resources of the \dc{} for time $T_{vm\_release}$.
 
+\subsubsection{VM activation scheme}
+Definitions: service, session, client subscribed to service 
+
+%\begin{enumerate}
+%	\item Private VM
+\textbf{Private VM} --- IaaS like, a VM is exclusively used by one user for offloading computations from his \ue{}.
+User provides the executable program that is loaded to an edge \dc{} from an \ue{} or a remote \dc{}.
+		\begin{description}
+			\item \textbf{per-session} --- a VM is initialized upon receiving the first request from a client and terminated just after finishing processing the last request of the session.
+			\item \textbf{client-within-cell} --- a VM is initialized when a client that is subscribed to a service enters a cell and is kept alive as long as he stays within the cell. 
+		\end{description}
+			
+%	\item Shared VM
+\textbf{Shared VM} --- SaaS like, a VM hosts a service that can be concurrently accessed by many users.
+		\begin{description}
+			\item \textbf{any-client-running} --- a VM is initialized upon receiving the first request from a client and terminated when there are no more requests to serve (waiting queue is empty and all sessions are finished).
+			\item \textbf{any-client-within-cell} --- a VM is initialized when the first client that is subscribed to a service enters a cell and is kept alive as long as any subscribed client stays within the cell. 
+		\end{description}
+%\end{enumerate}
+
+\subsubsection{VM migration}
 Migration has an influence on the service performance as well as on the resource availability on both source and destination \dc{}.
 On the source side, apart from ordinary resource requirements due to serving requests, VM consumes resources for sending its image to the destination \dc{}.
 In a case of postcopy live migration, VM at the source side still uses some resources even after the workload is redirected to the new location.

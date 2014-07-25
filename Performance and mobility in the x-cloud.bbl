@@ -69,6 +69,14 @@ M.A.F. Gutierrez and N.~Ventura.
   for Future Networks and Services (K-2011), Proceedings of ITU}, pages 1--7,
   2011.
 
+\bibitem{5719609}
+A~Iosup, S.~Ostermann, M.N. Yigitbasi, R.~Prodan, T.~Fahringer, and D.~H~J
+  Epema.
+\newblock Performance analysis of cloud computing services for many-tasks
+  scientific computing.
+\newblock {\em Parallel and Distributed Systems, IEEE Transactions on},
+  22(6):931--945, June 2011.
+
 \bibitem{liu2001traffic}
 Zhen Liu, Nicolas Niclausse, and C{\'e}sar Jalpa-Villanueva.
 \newblock Traffic model and performance evaluation of web servers.
