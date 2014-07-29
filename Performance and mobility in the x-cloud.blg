@@ -1,63 +1,54 @@
-This is BibTeX, Version 0.99d (TeX Live 2013)
+This is BibTeX, Version 0.99d (TeX Live 2012)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Performance and mobility in the x-cloud.aux
 The style file: plain.bst
 Database file #1: references.bib
 Warning--entry type for "SimJava" isn't style-file defined
 --line 1649 of file references.bib
-I was expecting a `,' or a `}'---line 1655 of file references.bib
- :   
- :   organization = {School of Infomatics, University of Edinburgh},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 1661 of file references.bib
- : @article{papagiannaki2003measurement
- :                                     ,
-I'm skipping whatever remains of this entry
 Warning--to sort, need author or key in EricssonWhitePaper
 Warning--to sort, need author or key in SimJava
 Warning--empty author in EricssonWhitePaper
 Warning--empty journal in melzercloud
 Warning--empty year in melzercloud
-You've used 17 entries,
+You've used 22 entries,
             2118 wiz_defined-function locations,
-            606 strings with 7438 characters,
-and the built_in function-call counts, 6089 in all, are:
-= -- 585
-> -- 294
-< -- 6
-+ -- 118
-- -- 100
-* -- 444
-:= -- 977
-add.period$ -- 50
-call.type$ -- 17
-change.case$ -- 102
+            634 strings with 8618 characters,
+and the built_in function-call counts, 8125 in all, are:
+= -- 783
+> -- 419
+< -- 8
++ -- 169
+- -- 144
+* -- 603
+:= -- 1317
+add.period$ -- 66
+call.type$ -- 22
+change.case$ -- 139
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 231
-empty$ -- 483
-format.name$ -- 100
-if$ -- 1296
+cite$ -- 27
+duplicate$ -- 298
+empty$ -- 615
+format.name$ -- 144
+if$ -- 1711
 int.to.chr$ -- 0
-int.to.str$ -- 17
-missing$ -- 14
-newline$ -- 86
-num.names$ -- 30
-pop$ -- 116
+int.to.str$ -- 22
+missing$ -- 19
+newline$ -- 111
+num.names$ -- 40
+pop$ -- 151
 preamble$ -- 1
-purify$ -- 84
+purify$ -- 116
 quote$ -- 0
-skip$ -- 170
+skip$ -- 220
 stack$ -- 0
-substring$ -- 350
-swap$ -- 58
-text.length$ -- 6
+substring$ -- 467
+swap$ -- 76
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 68
+type$ -- 88
 warning$ -- 5
-while$ -- 56
-width$ -- 19
-write$ -- 184
-(There were 2 error messages)
+while$ -- 73
+width$ -- 24
+write$ -- 239
+(There were 6 warnings)

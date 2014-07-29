@@ -56,6 +56,12 @@ Abhishek Chandra, Jon Weissman, and Benjamin Heintz.
 \newblock Decentralized edge clouds.
 \newblock {\em Internet Computing, IEEE}, 17(5):70--73, 2013.
 
+\bibitem{choi2007analysis}
+Baek-Young Choi, Sue Moon, Zhi-Li Zhang, Konstantina Papagiannaki, and
+  Christophe Diot.
+\newblock Analysis of point-to-point packet delay in an operational network.
+\newblock {\em Computer networks}, 51(13):3812--3827, 2007.
+
 \bibitem{chowdhury2009network}
 NM~Mosharaf~Kabir Chowdhury and Raouf Boutaba.
 \newblock Network virtualization: state of the art and research challenges.
@@ -69,6 +75,13 @@ M.A.F. Gutierrez and N.~Ventura.
   for Future Networks and Services (K-2011), Proceedings of ITU}, pages 1--7,
   2011.
 
+\bibitem{hu2005measurement}
+Ningning Hu, Li~Li, Zhuoqing~Morley Mao, Peter Steenkiste, and Jia Wang.
+\newblock A measurement study of internet bottlenecks.
+\newblock In {\em INFOCOM 2005. 24th Annual Joint Conference of the IEEE
+  Computer and Communications Societies. Proceedings IEEE}, volume~3, pages
+  1689--1700. IEEE, 2005.
+
 \bibitem{5719609}
 A~Iosup, S.~Ostermann, M.N. Yigitbasi, R.~Prodan, T.~Fahringer, and D.~H~J
   Epema.
@@ -76,6 +89,13 @@ A~Iosup, S.~Ostermann, M.N. Yigitbasi, R.~Prodan, T.~Fahringer, and D.~H~J
   scientific computing.
 \newblock {\em Parallel and Distributed Systems, IEEE Transactions on},
   22(6):931--945, June 2011.
+
+\bibitem{kiukkonen2010towards}
+Niko Kiukkonen, Jan Blom, Olivier Dousse, Daniel Gatica-Perez, and Juha
+  Laurila.
+\newblock Towards rich mobile phone datasets: Lausanne data collection
+  campaign.
+\newblock {\em Proc. ICPS, Berlin}, 2010.
 
 \bibitem{liu2001traffic}
 Zhen Liu, Nicolas Niclausse, and C{\'e}sar Jalpa-Villanueva.
@@ -106,5 +126,17 @@ L.~Ramaswamy, Ling Liu, and A.~Iyengar.
   networks.
 \newblock In {\em Distributed Computing Systems, 2005. ICDCS 2005. Proceedings.
   25th IEEE International Conference on}, pages 229--238, June 2005.
+
+\bibitem{salo2010practical}
+J~Salo, M~Nur-Alam, and K~Chang.
+\newblock Practical introduction to lte radio planning.
+\newblock {\em A white paper on basics of radio planning for 3GPP LTE in
+  interference limited and coverage limited scenarios, European Communications
+  Engineering (ECE) Ltd, Espoo, Finland}, 2010.
+
+\bibitem{satyanarayanan2009case}
+Mahadev Satyanarayanan, Paramvir Bahl, Ram{\'o}n Caceres, and Nigel Davies.
+\newblock The case for vm-based cloudlets in mobile computing.
+\newblock {\em Pervasive Computing, IEEE}, 8(4):14--23, 2009.
 
 \end{thebibliography}
