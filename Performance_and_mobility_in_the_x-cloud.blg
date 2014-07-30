@@ -3,49 +3,52 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Performance_and_mobility_in_the_x-cloud.aux
 The style file: plain.bst
 Database file #1: references.bib
+Warning--entry type for "SimJava" isn't style-file defined
+--line 1649 of file references.bib
 Warning--to sort, need author or key in EricssonWhitePaper
+Warning--to sort, need author or key in SimJava
 Warning--empty author in EricssonWhitePaper
 Warning--empty journal in melzercloud
 Warning--empty year in melzercloud
-You've used 15 entries,
+You've used 27 entries,
             2118 wiz_defined-function locations,
-            594 strings with 7009 characters,
-and the built_in function-call counts, 5469 in all, are:
-= -- 527
-> -- 260
-< -- 6
-+ -- 104
-- -- 88
-* -- 393
-:= -- 881
-add.period$ -- 45
-call.type$ -- 15
-change.case$ -- 90
+            664 strings with 9717 characters,
+and the built_in function-call counts, 10538 in all, are:
+= -- 1023
+> -- 535
+< -- 13
++ -- 216
+- -- 183
+* -- 776
+:= -- 1680
+add.period$ -- 84
+call.type$ -- 27
+change.case$ -- 172
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 213
-empty$ -- 433
-format.name$ -- 88
-if$ -- 1168
+cite$ -- 32
+duplicate$ -- 399
+empty$ -- 802
+format.name$ -- 183
+if$ -- 2250
 int.to.chr$ -- 0
-int.to.str$ -- 15
-missing$ -- 13
-newline$ -- 77
-num.names$ -- 28
-pop$ -- 100
+int.to.str$ -- 27
+missing$ -- 24
+newline$ -- 136
+num.names$ -- 52
+pop$ -- 193
 preamble$ -- 1
-purify$ -- 74
+purify$ -- 144
 quote$ -- 0
-skip$ -- 156
+skip$ -- 295
 stack$ -- 0
-substring$ -- 315
-swap$ -- 56
-text.length$ -- 6
+substring$ -- 624
+swap$ -- 118
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 60
-warning$ -- 4
-while$ -- 52
-width$ -- 17
-write$ -- 165
-(There were 4 warnings)
+type$ -- 108
+warning$ -- 5
+while$ -- 96
+width$ -- 29
+write$ -- 298
+(There were 6 warnings)

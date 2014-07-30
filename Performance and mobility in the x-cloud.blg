@@ -10,45 +10,45 @@ Warning--to sort, need author or key in SimJava
 Warning--empty author in EricssonWhitePaper
 Warning--empty journal in melzercloud
 Warning--empty year in melzercloud
-You've used 22 entries,
+You've used 27 entries,
             2118 wiz_defined-function locations,
-            634 strings with 8618 characters,
-and the built_in function-call counts, 8125 in all, are:
-= -- 783
-> -- 419
-< -- 8
-+ -- 169
-- -- 144
-* -- 603
-:= -- 1317
-add.period$ -- 66
-call.type$ -- 22
-change.case$ -- 139
+            664 strings with 9717 characters,
+and the built_in function-call counts, 10538 in all, are:
+= -- 1023
+> -- 535
+< -- 13
++ -- 216
+- -- 183
+* -- 776
+:= -- 1680
+add.period$ -- 84
+call.type$ -- 27
+change.case$ -- 172
 chr.to.int$ -- 0
-cite$ -- 27
-duplicate$ -- 298
-empty$ -- 615
-format.name$ -- 144
-if$ -- 1711
+cite$ -- 32
+duplicate$ -- 399
+empty$ -- 802
+format.name$ -- 183
+if$ -- 2250
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 19
-newline$ -- 111
-num.names$ -- 40
-pop$ -- 151
+int.to.str$ -- 27
+missing$ -- 24
+newline$ -- 136
+num.names$ -- 52
+pop$ -- 193
 preamble$ -- 1
-purify$ -- 116
+purify$ -- 144
 quote$ -- 0
-skip$ -- 220
+skip$ -- 295
 stack$ -- 0
-substring$ -- 467
-swap$ -- 76
-text.length$ -- 8
+substring$ -- 624
+swap$ -- 118
+text.length$ -- 13
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
+type$ -- 108
 warning$ -- 5
-while$ -- 73
-width$ -- 24
-write$ -- 239
+while$ -- 96
+width$ -- 29
+write$ -- 298
 (There were 6 warnings)

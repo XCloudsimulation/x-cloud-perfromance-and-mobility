@@ -4,6 +4,11 @@
 The telecom cloud oppertunity.
 \newblock Whitepaper, Ericsson, 2012.
 
+\bibitem{SimJava}
+simjava, 02 2014.
+\newblock Available online at
+  \url{http://www.icsa.inf.ed.ac.uk/research/groups/hase/simjava/}.
+
 \bibitem{ericsson_akami}
 Ericsson AB.
 \newblock Ericsson and akamai establish exclusive strategic alliance to create
@@ -51,10 +56,29 @@ Abhishek Chandra, Jon Weissman, and Benjamin Heintz.
 \newblock Decentralized edge clouds.
 \newblock {\em Internet Computing, IEEE}, 17(5):70--73, 2013.
 
+\bibitem{choi2007analysis}
+Baek-Young Choi, Sue Moon, Zhi-Li Zhang, Konstantina Papagiannaki, and
+  Christophe Diot.
+\newblock Analysis of point-to-point packet delay in an operational network.
+\newblock {\em Computer networks}, 51(13):3812--3827, 2007.
+
 \bibitem{chowdhury2009network}
 NM~Mosharaf~Kabir Chowdhury and Raouf Boutaba.
 \newblock Network virtualization: state of the art and research challenges.
 \newblock {\em Communications Magazine, IEEE}, 47(7):20--26, 2009.
+
+\bibitem{falaki2010first}
+Hossein Falaki, Dimitrios Lymberopoulos, Ratul Mahajan, Srikanth Kandula, and
+  Deborah Estrin.
+\newblock A first look at traffic on smartphones.
+\newblock In {\em Proceedings of the 10th ACM SIGCOMM conference on Internet
+  measurement}, pages 281--287. ACM, 2010.
+
+\bibitem{5360741}
+AJ. Fehske, F.~Richter, and G.P. Fettweis.
+\newblock Energy efficiency improvements through micro sites in cellular mobile
+  radio networks.
+\newblock In {\em GLOBECOM Workshops, 2009 IEEE}, pages 1--5, Nov 2009.
 
 \bibitem{6144211}
 M.A.F. Gutierrez and N.~Ventura.
@@ -64,10 +88,38 @@ M.A.F. Gutierrez and N.~Ventura.
   for Future Networks and Services (K-2011), Proceedings of ITU}, pages 1--7,
   2011.
 
+\bibitem{hu2005measurement}
+Ningning Hu, Li~Li, Zhuoqing~Morley Mao, Peter Steenkiste, and Jia Wang.
+\newblock A measurement study of internet bottlenecks.
+\newblock In {\em INFOCOM 2005. 24th Annual Joint Conference of the IEEE
+  Computer and Communications Societies. Proceedings IEEE}, volume~3, pages
+  1689--1700. IEEE, 2005.
+
+\bibitem{5719609}
+A~Iosup, S.~Ostermann, M.N. Yigitbasi, R.~Prodan, T.~Fahringer, and D.~H~J
+  Epema.
+\newblock Performance analysis of cloud computing services for many-tasks
+  scientific computing.
+\newblock {\em Parallel and Distributed Systems, IEEE Transactions on},
+  22(6):931--945, June 2011.
+
+\bibitem{kiukkonen2010towards}
+Niko Kiukkonen, Jan Blom, Olivier Dousse, Daniel Gatica-Perez, and Juha
+  Laurila.
+\newblock Towards rich mobile phone datasets: Lausanne data collection
+  campaign.
+\newblock {\em Proc. ICPS, Berlin}, 2010.
+
 \bibitem{liu2001traffic}
 Zhen Liu, Nicolas Niclausse, and C{\'e}sar Jalpa-Villanueva.
 \newblock Traffic model and performance evaluation of web servers.
 \newblock {\em Performance Evaluation}, 46(2):77--100, 2001.
+
+\bibitem{maier2010first}
+Gregor Maier, Fabian Schneider, and Anja Feldmann.
+\newblock A first look at mobile hand-held device traffic.
+\newblock In {\em Passive and Active Measurement}, pages 161--170. Springer,
+  2010.
 
 \bibitem{melzercloud}
 Jordan Melzer.
@@ -79,11 +131,13 @@ S.~Pal and T.~Pal.
 \newblock In {\em Internet Multimedia Systems Architecture and Application
   (IMSAA), 2011 IEEE 5th International Conference on}, pages 1--6, 2011.
 
-\bibitem{5634134}
-G.~Piro, L.A. Grieco, G.~Boggia, F.~Capozzi, and P.~Camarda.
-\newblock Simulating lte cellular systems: An open-source framework.
-\newblock {\em Vehicular Technology, IEEE Transactions on}, 60(2):498--513, Feb
-  2011.
+\bibitem{papagiannaki2003measurement}
+Konstantina Papagiannaki, Sue Moon, Chuck Fraleigh, Patrick Thiran, and
+  Christophe Diot.
+\newblock Measurement and analysis of single-hop delay on an ip backbone
+  network.
+\newblock {\em Selected Areas in Communications, IEEE Journal on},
+  21(6):908--921, 2003.
 
 \bibitem{1437087}
 L.~Ramaswamy, Ling Liu, and A.~Iyengar.
@@ -91,5 +145,32 @@ L.~Ramaswamy, Ling Liu, and A.~Iyengar.
   networks.
 \newblock In {\em Distributed Computing Systems, 2005. ICDCS 2005. Proceedings.
   25th IEEE International Conference on}, pages 229--238, June 2005.
+
+\bibitem{salo2010practical}
+J~Salo, M~Nur-Alam, and K~Chang.
+\newblock Practical introduction to lte radio planning.
+\newblock {\em A white paper on basics of radio planning for 3GPP LTE in
+  interference limited and coverage limited scenarios, European Communications
+  Engineering (ECE) Ltd, Espoo, Finland}, 2010.
+
+\bibitem{satyanarayanan2009case}
+Mahadev Satyanarayanan, Paramvir Bahl, Ram{\'o}n Caceres, and Nigel Davies.
+\newblock The case for vm-based cloudlets in mobile computing.
+\newblock {\em Pervasive Computing, IEEE}, 8(4):14--23, 2009.
+
+\bibitem{shahab2013framework}
+Suhail~Najm Shahab, Tiong~Sieh Kiong, and Ayad~Atiyah Abdulkafi.
+\newblock A framework for energy efficiency evaluation of lte network in urban,
+  suburban and rural areas.
+\newblock {\em Australian Journal of Basic and Applied Sciences},
+  7(7):404--413, 2013.
+
+\bibitem{ucloud}
+William Voorsluys, James Broberg, Srikumar Venugopal, and Rajkumar Buyya.
+\newblock Cost of virtual machine live migration in clouds: A performance
+  evaluation.
+\newblock In MartinGilje Jaatun, Gansen Zhao, and Chunming Rong, editors, {\em
+  Cloud Computing}, volume 5931 of {\em Lecture Notes in Computer Science},
+  pages 254--265. Springer Berlin Heidelberg, 2009.
 
 \end{thebibliography}

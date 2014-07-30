@@ -67,6 +67,19 @@ NM~Mosharaf~Kabir Chowdhury and Raouf Boutaba.
 \newblock Network virtualization: state of the art and research challenges.
 \newblock {\em Communications Magazine, IEEE}, 47(7):20--26, 2009.
 
+\bibitem{falaki2010first}
+Hossein Falaki, Dimitrios Lymberopoulos, Ratul Mahajan, Srikanth Kandula, and
+  Deborah Estrin.
+\newblock A first look at traffic on smartphones.
+\newblock In {\em Proceedings of the 10th ACM SIGCOMM conference on Internet
+  measurement}, pages 281--287. ACM, 2010.
+
+\bibitem{5360741}
+AJ. Fehske, F.~Richter, and G.P. Fettweis.
+\newblock Energy efficiency improvements through micro sites in cellular mobile
+  radio networks.
+\newblock In {\em GLOBECOM Workshops, 2009 IEEE}, pages 1--5, Nov 2009.
+
 \bibitem{6144211}
 M.A.F. Gutierrez and N.~Ventura.
 \newblock Mobile cloud computing based on service oriented architecture:
@@ -101,6 +114,12 @@ Niko Kiukkonen, Jan Blom, Olivier Dousse, Daniel Gatica-Perez, and Juha
 Zhen Liu, Nicolas Niclausse, and C{\'e}sar Jalpa-Villanueva.
 \newblock Traffic model and performance evaluation of web servers.
 \newblock {\em Performance Evaluation}, 46(2):77--100, 2001.
+
+\bibitem{maier2010first}
+Gregor Maier, Fabian Schneider, and Anja Feldmann.
+\newblock A first look at mobile hand-held device traffic.
+\newblock In {\em Passive and Active Measurement}, pages 161--170. Springer,
+  2010.
 
 \bibitem{melzercloud}
 Jordan Melzer.
@@ -138,5 +157,20 @@ J~Salo, M~Nur-Alam, and K~Chang.
 Mahadev Satyanarayanan, Paramvir Bahl, Ram{\'o}n Caceres, and Nigel Davies.
 \newblock The case for vm-based cloudlets in mobile computing.
 \newblock {\em Pervasive Computing, IEEE}, 8(4):14--23, 2009.
+
+\bibitem{shahab2013framework}
+Suhail~Najm Shahab, Tiong~Sieh Kiong, and Ayad~Atiyah Abdulkafi.
+\newblock A framework for energy efficiency evaluation of lte network in urban,
+  suburban and rural areas.
+\newblock {\em Australian Journal of Basic and Applied Sciences},
+  7(7):404--413, 2013.
+
+\bibitem{ucloud}
+William Voorsluys, James Broberg, Srikumar Venugopal, and Rajkumar Buyya.
+\newblock Cost of virtual machine live migration in clouds: A performance
+  evaluation.
+\newblock In MartinGilje Jaatun, Gansen Zhao, and Chunming Rong, editors, {\em
+  Cloud Computing}, volume 5931 of {\em Lecture Notes in Computer Science},
+  pages 254--265. Springer Berlin Heidelberg, 2009.
 
 \end{thebibliography}

@@ -1,33 +1,48 @@
 \section{Experiments}
-The aforementioned model was implemented in Java employing simjava \cite{SimJava} as the event driven framework. With the constituent models implemented as modules into the event driven framework.
+The aforementioned model was implemented in Java employing simjava \cite{SimJava} as the event driven framework.
 
-\subsection{Service performance and mobility}
-In order to reveal the dynamics between the number of users, placement of the \dcs{}, and the number for services, the simulation was split up into 3 dimensions.
-To that effect, simulations were performed for a population of \ues{} $N_{ue}$ ranging from 10 to 500 \ues{} at intervals of 10 \ues{}.
+\subsection{\Ue, mobility and network}
+To reveal the effect of varying load on the \dcs, the number of users, placement of the \dcs{}, and the number for services were varied independantly thoughout as many simulation scenarios. 
+
+
+
 %Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ and the placement of the \dcs{} was varied. 
-Moreover, the network spanned 16 \rbss{}, $N_{rbs}$ and the number of \dcs{} $N_{dc}$ was changed between 16, 4 and 1, with each \dc{} serving 1, 4 or 16 \rbss{} respectively.
-Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ was varied between 1 and 5.
+In proportion to the range of movemt and evenly divisibale by $N_{dc}^2$, the simulation domain spanns 16 \rbss{} $N_{rbs}$. The cell dimension $d_{rbs}$ adhere to a proposed maximum cel radius of 750m, as detailed in \cite{shahab2013framework}. Although rectangular, its area equates to the area of a circular cell with a radius of 750m, with results in a cell width and hight $d_{rbs}$ to 1300m. The population of \ues{} $N_{ue}$ ranged from from 10 to 1600 \ues{}, doubleing with each increment. The number of \dcs{} $N_{dc}$ was varied between 16, 4 and 1, with each \dc{} serving 1, 4 or 16 \rbss{} respectively. Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ was varied between 1 and 5.
 %The network spans 9 radio access nodes, $N_{rbs}$.
 
-For each above mentioned simulation scenario, service latency is measured in each \ue{}, and VM migration/duplication resources in the \dc{}.
+The simulation time is set to 8 hours, $T_{sim}=28800$ seconds, leaving sufficient time for each \ue to on average vist half of the \rbss.
 
-\subsection{VM resource allocation/release}
-Times of resource allocation $T_{vm\_init}$ and release $T_{vm\_release}$ are set as measured for m1.small instance (1~vCPU, 1.7 GB of RAM and 160 GB disk) on Amazon EC2 \cite{5719609}. %http://aws.amazon.com/ec2/previous-generation/
+\subsection{\Dc and VM parameters}
+Times for resource allocation and release and lognormal distributed with means $T_{vm\_init}$ and $T_{vm\_release}$ respectively, and are modelled after Amazon EC2 measurements for m1.small instance (1~vCPU, 1.7 GB of RAM and 160 GB disk) \cite{5719609}. %http://aws.amazon.com/ec2/previous-generation/
+
+The service time for each \dc{} is set independently, proportional to the mean request generation rate over the number of \rbss{} and the number of VMs running, see Equations \ref{eq:service_rate, eq:service_time}. Where $\lambda_{sys}$ is the aggregate arrival rate to the system, and $K$ is a scaleing factor set to 1. Each VM is provisioned to handle 50 users ($N_{ue} = 50$). The mean service time for each VM is thus $1/\mu$.
+
+\begin{equation}
+\label{eq:service_rate}
+\mu = K \cdot  \lambda_{ue} \cdot N_{ue} \cdot \frac{ N_{services}}{N_{dc}} 
+\end{equation}
+
+\begin{equation}
+\label{eq:service_time}
+\lambda_{ue} = \frac{ \bar{N}_{requests} }{\bar{N}_{requests} \cdot \bar{T}_{request} + \bar{T}_{session} }
+\end{equation}
+
+As resources are assumed to be obiqutous we wich to observe the effects of an overloaded \dc. For modeling simplicity, \dc capacity if definef by a limit of how many VMs $N_{vm,limit}$ in can simultaniously host. Our experiment regards two fundamental provisioning scenarios. When the VM limit $N_{vm,limit}$ has been reached, either any new VMs are denied or the additionaly needed \dc capacity is shared equaly amongst the $N_{i,vm}$ VMs by increasing the service time $T_{i,ser}$ with a factor $K_{over}$,see Equation \ref{eq:shared_service_time}.
+
+\begin{equation}
+\label{eq:shared_service_time}
+K_{over} = \frac{ \max(N_{i,vm},N_{vm,limit}) }{ N_{vm,limit} }
+\end{equation}
 
 %\subsection{VM migration schemes}
 %For each scenarios the simulation reveals how often the service resides in each \dc{}, how many times one service is started and stopped in each \dc{}, and how how much service latency is incurred by starting and stopping a service throughout the simulation.
 
-\subsection{Global parameters and principals}
-The service time for each \dc{} is set independently, proportional to the mean request generation rate over the number of \rbss{} and the number of VMs running, see Equation \ref{eq:service_time}.
 %The \dc{} service time for the ith \dc{} $T_{i,vm}$ is set proportional to the mean request generation rate over the number of \rbss{}, and the number of VMs running on the ith \dc{} $N_{i,vm}$, see Equation \ref{eq:service_time}.
 
 Simulation model parameters used in the experiments can be found in Table~\ref{table:simulation_parameters}, likewise the service parameters are declared in Table~\ref{table:traffic_parameters}.
 
-\begin{equation}
-\label{eq:service_time}
-T_{i,j,vm} = K \cdot N_{i,vm} \cdot \frac{ \bar{\lambda}_{sys} }{N_{rbs}},
-\end{equation}
-where $i$, $j$, $vm$, $K$, $N_{i,vm}$, $\bar{\lambda}_{sys}$, $N_{rbs}$. 
+
+%where $i$, $j$, $vm$, $K$, $N_{ser}$, $\bar{\lambda}_{sys}$, $N_{rbs}$. 
 
 \begin{table}[tb]
  	\centering
@@ -39,9 +54,10 @@ where $i$, $j$, $vm$, $K$, $N_{i,vm}$, $\bar{\lambda}_{sys}$, $N_{rbs}$.
     	$N_{dc}$						& $\{1,4,16\}$				\\ \hline
     	$N_{ser}$						& 1--5							\\ \hline
     	$T_{ser}$						& \\ \hline
-    	$T_{sim}$						& \\ \hline
+    	$T_{sim}$						& 28800 seconds\\ \hline
     	$d_{rbs}$						& \\ \hline
     	$T_{net}$						& \\ \hline
+        $N_{vm,limit}$                  & \\ \hline
         %$T_{sus}$						& \\ \hline
         %$N_{i,sus vm}$				& \\ \hline
         $T_{vm\_init}$				& avg 82 s, min 69 s, max 126 s \\ \hline
@@ -62,14 +78,21 @@ where $i$, $j$, $vm$, $K$, $N_{i,vm}$, $\bar{\lambda}_{sys}$, $N_{rbs}$.
 	
     \begin{tabular}{|l|l|l|}\hline
     	\textbf{Component}  	& \textbf{Distribution} 	& \textbf{Parameters}     \\ \hline
-    	$S_f$   & Pareto   				& K=133000 $\alpha$ =1.1  \\ \hline
+    	$S_f$   & Pareto   				    & K=133000 $\alpha$ =1.1  \\ \hline
     	$S_r$   & Pareto    				& K=1000         \\ \hline
     	$D_r$ 	& Weibull    				& $\alpha$ =1.46 $\beta$ =0.382 \\ \hline
     	$D_s$ 	& Pareto     				& K=1 $\alpha$=1.5      \\ \hline
     \end{tabular}
     
+%Session arrival,Poisson process (0.0005≤λ≤0.01),,
+%Number of clicks,Inverse Gaussian (μ=5; λ=3),5,1.28
+%Inter-click idle time (s),Lognormal (m=3; σ=1.1),36.8,56.4
+
     \caption{Service model components}
     \label{table:traffic_parameters}
 \end{table}
 
-To ensure statistical accuracy, each simulation run is independently replicated 10 times.
+\subsection{Measurements}
+To ensure statistical accuracy, each simulation scenario was independently replicated 10 times.
+
+For each abovementioned simulation scenario, every request is recorded with where it was prossed, if it was terminated, the time spent queing, processing, and propagating. Similarly, for each VM the proportion of time spent in each state is recorded.
