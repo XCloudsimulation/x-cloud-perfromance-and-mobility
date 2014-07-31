@@ -1,4 +1,8 @@
 \subsection{Service}
-Most mobile applications use HTTP as a means to communicate with remote services \cite{maier2010first,falaki2010first}. The HTTP traffic model in \cite{liu2001traffic} provides a small scale open loop traffic model that is representative of light mobile traffic.
+Most mobile applications use HTTP as a means to communicate with remote services \cite{maier2010first,falaki2010first}. The HTTP traffic model in \cite{liu2001traffic} provides an open loop traffic model with a long tailed session size distribution, representative of the diversity of the requests. 
+
+Each session is separated in time $\lambda_{ses}$ with a poisson proecess. Each sessions produces $N_{req}$, sampled from an inverse gaussian distribution, where each is separated in time by log-normal distibuted delay $D_{req}$.
+
+Each service adheres to the same properties, and are only distinguished by the VM in which they are running. Additionally, the properties of the service model are independant of \ue state and mobilty mode.
 
 % Even older ; reyes1999page

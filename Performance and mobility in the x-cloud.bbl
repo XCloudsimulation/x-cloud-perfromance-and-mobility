@@ -121,6 +121,15 @@ Gregor Maier, Fabian Schneider, and Anja Feldmann.
 \newblock In {\em Passive and Active Measurement}, pages 161--170. Springer,
   2010.
 
+\bibitem{March2011618}
+Verdi March, Yan Gu, Erwin Leonardi, George Goh, Markus Kirchberg, and Bu~Sung
+  Lee.
+\newblock ucloud: Towards a new paradigm of rich mobile applications.
+\newblock {\em Procedia Computer Science}, 5(0):618 -- 624, 2011.
+\newblock The 2nd International Conference on Ambient Systems, Networks and
+  Technologies (ANT-2011) / The 8th International Conference on Mobile Web
+  Information Systems (MobiWIS 2011).
+
 \bibitem{melzercloud}
 Jordan Melzer.
 \newblock Cloud radio access networks.
@@ -164,13 +173,5 @@ Suhail~Najm Shahab, Tiong~Sieh Kiong, and Ayad~Atiyah Abdulkafi.
   suburban and rural areas.
 \newblock {\em Australian Journal of Basic and Applied Sciences},
   7(7):404--413, 2013.
-
-\bibitem{ucloud}
-William Voorsluys, James Broberg, Srikumar Venugopal, and Rajkumar Buyya.
-\newblock Cost of virtual machine live migration in clouds: A performance
-  evaluation.
-\newblock In MartinGilje Jaatun, Gansen Zhao, and Chunming Rong, editors, {\em
-  Cloud Computing}, volume 5931 of {\em Lecture Notes in Computer Science},
-  pages 254--265. Springer Berlin Heidelberg, 2009.
 
 \end{thebibliography}

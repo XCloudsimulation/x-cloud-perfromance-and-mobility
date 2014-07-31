@@ -1,4 +1,6 @@
 \section{Experiments}
+\label{sec:experiments}
+
 The aforementioned model was implemented in Java employing simjava \cite{SimJava} as the event driven framework.
 
 \subsection{\Ue, mobility and network}
@@ -15,7 +17,7 @@ The simulation time is set to 8 hours, $T_{sim}=28800$ seconds, leaving sufficie
 \subsection{\Dc and VM parameters}
 Times for resource allocation and release and lognormal distributed with means $T_{vm\_init}$ and $T_{vm\_release}$ respectively, and are modelled after Amazon EC2 measurements for m1.small instance (1~vCPU, 1.7 GB of RAM and 160 GB disk) \cite{5719609}. %http://aws.amazon.com/ec2/previous-generation/
 
-The service time for each \dc{} is set independently, proportional to the mean request generation rate over the number of \rbss{} and the number of VMs running, see Equations \ref{eq:service_rate, eq:service_time}. Where $\lambda_{sys}$ is the aggregate arrival rate to the system, and $K$ is a scaleing factor set to 1. Each VM is provisioned to handle 50 users ($N_{ue} = 50$). The mean service time for each VM is thus $1/\mu$.
+The service time for each \dc{} is set independently, proportional to the mean request generation rate over the number of \rbss{} and the number of VMs running, see Equations \ref{eq:service_rate} \& \ref{eq:service_time}. Where $\lambda_{sys}$ is the aggregate arrival rate to the system, and $K$ is a scaleing factor set to 1. Each VM is provisioned to handle 50 users ($N_{ue} = 50$). The mean service time for each VM is thus $1/\mu$.
 
 \begin{equation}
 \label{eq:service_rate}

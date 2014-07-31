@@ -12,43 +12,43 @@ Warning--empty journal in melzercloud
 Warning--empty year in melzercloud
 You've used 27 entries,
             2118 wiz_defined-function locations,
-            664 strings with 9717 characters,
-and the built_in function-call counts, 10538 in all, are:
-= -- 1023
-> -- 535
-< -- 13
-+ -- 216
-- -- 183
-* -- 776
-:= -- 1680
+            662 strings with 9798 characters,
+and the built_in function-call counts, 10421 in all, are:
+= -- 1012
+> -- 534
+< -- 11
++ -- 217
+- -- 184
+* -- 772
+:= -- 1672
 add.period$ -- 84
 call.type$ -- 27
-change.case$ -- 172
+change.case$ -- 174
 chr.to.int$ -- 0
 cite$ -- 32
-duplicate$ -- 399
-empty$ -- 802
-format.name$ -- 183
-if$ -- 2250
+duplicate$ -- 385
+empty$ -- 788
+format.name$ -- 184
+if$ -- 2211
 int.to.chr$ -- 0
 int.to.str$ -- 27
 missing$ -- 24
-newline$ -- 136
-num.names$ -- 52
-pop$ -- 193
+newline$ -- 137
+num.names$ -- 50
+pop$ -- 190
 preamble$ -- 1
-purify$ -- 144
+purify$ -- 146
 quote$ -- 0
-skip$ -- 295
+skip$ -- 284
 stack$ -- 0
-substring$ -- 624
-swap$ -- 118
-text.length$ -- 13
+substring$ -- 623
+swap$ -- 107
+text.length$ -- 11
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 108
 warning$ -- 5
-while$ -- 96
+while$ -- 94
 width$ -- 29
 write$ -- 298
 (There were 6 warnings)

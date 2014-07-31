@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  31 JUL 2014 01:39
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  31 JUL 2014 22:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -910,12 +910,12 @@ Package caption Info: End \AtBeginDocument code.
 
 ** ATTENTION: \keywords is deprecated (line 61). Use \IEEEkeywords instead.
 (./introduction.tex
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+LaTeX Font Info:    Try loading font information for U+msa on input line 3.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2009/06/22 v3.00 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+LaTeX Font Info:    Try loading font information for U+msb on input line 3.
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2009/06/22 v3.00 AMS symbols B
@@ -932,7 +932,7 @@ Package epstopdf Info: Source file: <fig_system_model.eps>
 (epstopdf)                    size: 22736 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig_system_model-eps-conve
 rted-to.pdf fig_system_model.eps>
-(epstopdf)             \includegraphics on input line 7.
+(epstopdf)             \includegraphics on input line 8.
 Package epstopdf Info: Output file is already uptodate.
 
 <fig_system_model-eps-converted-to.pdf, id=12, 799.98875pt x 619.31375pt>
@@ -940,12 +940,30 @@ File: fig_system_model-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig_system_model-eps-converted-to.pdf>
 Package pdftex.def Info: fig_system_model-eps-converted-to.pdf used on input li
-ne 7.
+ne 8.
 (pdftex.def)             Requested size: 253.04987pt x 195.89755pt.
-) (./simulation.tex
-(./model_service.tex) (./model_mobilty.tex [2 <./fig_system_model-eps-converted
--to.pdf>]) (./model_mobile_network.tex) (./model_core_network.tex)
-(./model_data_centre_william.tex
+ [2 <./fig_system_model-eps-converted-to.pdf>]) (./simulation.tex (./model_serv
+ice.tex) (./model_mobilty.tex
+Package epstopdf Info: Source file: <user_mobility.eps>
+(epstopdf)                    date: 2014-07-30 16:52:59
+(epstopdf)                    size: 22084 bytes
+(epstopdf)             Output file: <user_mobility-eps-converted-to.pdf>
+(epstopdf)                    date: 2014-07-31 11:43:06
+(epstopdf)                    size: 10098 bytes
+(epstopdf)             Command: <repstopdf --outfile=user_mobility-eps-converte
+d-to.pdf user_mobility.eps>
+(epstopdf)             \includegraphics on input line 6.
+Package epstopdf Info: Output file is already uptodate.
+
+<user_mobility-eps-converted-to.pdf, id=27, 428.60126pt x 487.8225pt>
+File: user_mobility-eps-converted-to.pdf Graphic file (type pdf)
+
+<use user_mobility-eps-converted-to.pdf>
+Package pdftex.def Info: user_mobility-eps-converted-to.pdf used on input line 
+6.
+(pdftex.def)             Requested size: 253.04987pt x 288.01375pt.
+) (./model_mobile_network.tex)
+(./model_core_network.tex) (./model_data_centre_william.tex
 Package epstopdf Info: Source file: <fig_dc_model.eps>
 (epstopdf)                    date: 2014-07-10 22:47:38
 (epstopdf)                    size: 229907 bytes
@@ -964,21 +982,28 @@ File: fig_dc_model-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: fig_dc_model-eps-converted-to.pdf used on input line 4
 .
 (pdftex.def)             Requested size: 253.04987pt x 183.54338pt.
- [3 <./fig_dc_model-eps-converted-to.pdf>])) (./experiments.tex
+ [3 <./user_mobility-eps-converted-to.pdf>])) (./experiments.tex [4 <./fig_dc_m
+odel-eps-converted-to.pdf>])
+(./results.tex <PROCESS.pdf, id=85, 505.89pt x 505.89pt>
+File: PROCESS.pdf Graphic file (type pdf)
+ <use PROCESS.pdf>
+Package pdftex.def Info: PROCESS.pdf used on input line 9.
+(pdftex.def)             Requested size: 253.04987pt x 253.05243pt.
 
-LaTeX Warning: Reference `eq:service_rate, eq:service_time' on page 4 undefined
- on input line 18.
+<TRANSFERING_USER.pdf, id=86, 505.89pt x 505.89pt>
+File: TRANSFERING_USER.pdf Graphic file (type pdf)
+ <use TRANSFERING_USER.pdf>
+Package pdftex.def Info: TRANSFERING_USER.pdf used on input line 17.
+(pdftex.def)             Requested size: 253.04987pt x 253.05243pt.
 
-) [4] (./results.tex
-<vm_state_PROCESS_nbr_users.pdf, id=83, 505.89pt x 505.89pt>
-File: vm_state_PROCESS_nbr_users.pdf Graphic file (type pdf)
-
-<use vm_state_PROCESS_nbr_users.pdf>
-Package pdftex.def Info: vm_state_PROCESS_nbr_users.pdf used on input line 7.
-(pdftex.def)             Requested size: 227.74333pt x 227.74873pt.
+<IDLE.pdf, id=87, 505.89pt x 505.89pt>
+File: IDLE.pdf Graphic file (type pdf)
+ <use IDLE.pdf>
+Package pdftex.def Info: IDLE.pdf used on input line 25.
+(pdftex.def)             Requested size: 253.04987pt x 253.05243pt.
 ) (./conslusions.tex)
-(./future_research.tex) (./Performance and mobility in the x-cloud.bbl [5 <./vm
-_state_PROCESS_nbr_users.pdf>])
+(./future_research.tex) (./Performance and mobility in the x-cloud.bbl [5]
+[6 <./PROCESS.pdf> <./TRANSFERING_USER.pdf> <./IDLE.pdf>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -990,41 +1015,34 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[6
+[7
 
-] (./Performance and mobility in the x-cloud.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+] (./Performance and mobility in the x-cloud.aux) ) 
 Here is how much of TeX's memory you used:
- 13896 strings out of 493488
- 254372 string characters out of 3141326
- 331802 words of memory out of 3000000
- 16852 multiletter control sequences out of 15000+200000
+ 13918 strings out of 493488
+ 254730 string characters out of 3141326
+ 331803 words of memory out of 3000000
+ 16871 multiletter control sequences out of 15000+200000
  43819 words of font info for 88 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,14n,55p,1196b,288s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/local/texlive/2012/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
-xlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texl
-ive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texliv
-e/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
-2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
-2/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/t
-exmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/
-fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on "Performance and mobility in the x-cloud.pdf" (6 pages, 22908
-9 bytes).
+ 56i,14n,55p,1261b,288s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2012/tex
+mf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2012/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2012/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2012/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/time
+s/utmb8a.pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmbi8a.
+pfb></usr/local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/
+local/texlive/2012/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "Performance and mobility in the x-cloud.pdf" (7 pages, 24776
+8 bytes).
 PDF statistics:
- 133 PDF objects out of 1000 (max. 8388607)
- 77 compressed objects within 1 object stream
+ 160 PDF objects out of 1000 (max. 8388607)
+ 97 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 28 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 
