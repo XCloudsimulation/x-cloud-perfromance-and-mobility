@@ -2,29 +2,42 @@
 \label{sec:results}
 
 \subsection{\Dc utilisation}
+\Dc utilization markedly correlates with the number of potential service subscribers in network $N_{\ue}$. The effect is illustarted Figure \ref{fig:process}, which shows a strong growth of VM utilization when approaching maximum stable load at $N_{\ue}=800$, measured in the percentage of time it spends processing requets. Neverthless, the process utilization starts to decay once we pass the number of stable subscribers, as more resources are now need to migrate deffered users. Conversely, Figure \ref{fig:idle} shows how, as a result of increased parallel session recidency, the proportion of time spent idle decreases dramatically.
+
 \begin{figure}[tb]
 	\centering
-	%\includegraphics[height=0.175\paperheight]{diagram_overview.eps} 
+	%\includegraphics[height=0.175\paperheight]{diagram_overview.eps}
 	\includegraphics[width=\linewidth]{PROCESS.pdf} 
-	\caption{Amount of time spent processing vs. the number of \ues in the system}
+	\caption{Amount of time spent processing vs. the number of \ues in the entire network}
 	\label{fig:process}
 \end{figure}
 
 \begin{figure}[tb]
 	\centering
-	%\includegraphics[height=0.175\paperheight]{diagram_overview.eps} 
+	%\includegraphics[height=0.175\paperheight]{diagram_overview.eps}
+	\includegraphics[width=\linewidth]{IDLE.pdf} 
+	\caption{Amount of time spent in idle state vs. the number of \ues in the entire network}
+	\label{fig:idle}
+\end{figure}
+
+Similarly, compounded by an increased likelyhood of congestion in any given VM, the amount of requests needing to be migrated increases near exponentially with a growing numer of subscribers $N_{\ue}$. Figure \ref{fig:transfering} illustrates the growth in the amount of time spent on migrating sessions.
+
+\begin{figure}[tb]
+	\centering
+	%\includegraphics[height=0.175\paperheight]{diagram_overview.eps}
 	\includegraphics[width=\linewidth]{TRANSFERING_USER.pdf} 
-	\caption{Amount of time spent transfering requests vs. the number of \ues in the system}
+	\caption{Amount of time spent transfering requests vs. the number of \ues in the entire network}
 	\label{fig:transfering}
 \end{figure}
 
 \begin{figure}[tb]
 	\centering
-	%\includegraphics[height=0.175\paperheight]{diagram_overview.eps} 
-	\includegraphics[width=\linewidth]{IDLE.pdf} 
-	\caption{Amount of time spent in idle state vs. the number of \ues in the system}
-	\label{fig:idle}
+	%\includegraphics[height=0.175\paperheight]{diagram_overview.eps}
+	\includegraphics[width=\linewidth]{placeholder.eps} 
+	\caption{Number of times a session is migrated vs. the numder of \ues in the entire network}
+	\label{fig:session_migration}
 \end{figure}
+
 \subsubsection{\Dc dispersion}
 
 \subsection{Constrained \dc resources}
@@ -32,3 +45,4 @@
 \subsection{Service performance}
 
 \subsection{Properties of migration}
+\subsubsection{Session completion grade per visited VM}

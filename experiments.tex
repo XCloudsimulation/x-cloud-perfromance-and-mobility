@@ -1,15 +1,12 @@
 \section{Experiments}
 \label{sec:experiments}
-
 The aforementioned model was implemented in Java employing simjava \cite{SimJava} as the event driven framework.
 
 \subsection{\Ue, mobility and network}
-To reveal the effect of varying load on the \dcs, the number of users, placement of the \dcs{}, and the number for services were varied independantly thoughout as many simulation scenarios. 
-
-
+To reveal the effect of varying load on the \dcs, the number of \ue service subscribers $N_{\ue}$, placement of the \dcs{}, and the number for services were varied independantly thoughout as many simulation scenarios. 
 
 %Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ and the placement of the \dcs{} was varied. 
-In proportion to the range of movemt and evenly divisibale by $N_{dc}^2$, the simulation domain spanns 16 \rbss{} $N_{rbs}$. The cell dimension $d_{rbs}$ adhere to a proposed maximum cel radius of 750m, as detailed in \cite{shahab2013framework}. Although rectangular, its area equates to the area of a circular cell with a radius of 750m, with results in a cell width and hight $d_{rbs}$ to 1300m. The population of \ues{} $N_{ue}$ ranged from from 10 to 1600 \ues{}, doubleing with each increment. The number of \dcs{} $N_{dc}$ was varied between 16, 4 and 1, with each \dc{} serving 1, 4 or 16 \rbss{} respectively. Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ was varied between 1 and 5.
+In proportion to the range of movemt and evenly divisibale by $N_{dc}^2$, the simulation domain spanns 16 \rbss{} $N_{rbs}$. The cell dimension $d_{rbs}$ adhere to a proposed maximum cell radius of 750m, as detailed in \cite{shahab2013framework}. Although rectangular, its area equates to the area of a circular cell with a radius of 750m, with results in a cell width and hight $d_{rbs}$ to 1300m. The population of \ues{} subscrining to a service $N_{ue}$ ranged from from 10 to 1600 \ues{}, doubleing with each increment. The number of \dcs{} $N_{dc}$ was varied between 16, 4 and 1, with each \dc{} serving 1, 4 or 16 \rbss{} respectively. Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ was varied between 1 and 5.
 %The network spans 9 radio access nodes, $N_{rbs}$.
 
 The simulation time is set to 8 hours, $T_{sim}=28800$ seconds, leaving sufficient time for each \ue to on average vist half of the \rbss.
@@ -17,7 +14,7 @@ The simulation time is set to 8 hours, $T_{sim}=28800$ seconds, leaving sufficie
 \subsection{\Dc and VM parameters}
 Times for resource allocation and release and lognormal distributed with means $T_{vm\_init}$ and $T_{vm\_release}$ respectively, and are modelled after Amazon EC2 measurements for m1.small instance (1~vCPU, 1.7 GB of RAM and 160 GB disk) \cite{5719609}. %http://aws.amazon.com/ec2/previous-generation/
 
-The service time for each \dc{} is set independently, proportional to the mean request generation rate over the number of \rbss{} and the number of VMs running, see Equations \ref{eq:service_rate} \& \ref{eq:service_time}. Where $\lambda_{sys}$ is the aggregate arrival rate to the system, and $K$ is a scaleing factor set to 1. Each VM is provisioned to handle 50 users ($N_{ue} = 50$). The mean service time for each VM is thus $1/\mu$.
+The service time for each \dc{} is set independently, proportional to the mean request generation rate over the number of \rbss{} and the number of VMs running, see Equations \ref{eq:service_rate} \& \ref{eq:service_time}. Where $\lambda_{sys}$ is the aggregate arrival rate to the system, and $K$ is a scaleing factor set to 1. Each VM is provisioned to handle 20 concurrent active subscribers ($N_{\ue} = 20$). The mean service time for each VM is thus $1/\mu$.
 
 \begin{equation}
 \label{eq:service_rate}
