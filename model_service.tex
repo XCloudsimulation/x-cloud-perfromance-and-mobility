@@ -1,8 +1,8 @@
 \subsection{Service}
-Most mobile applications use HTTP as a means to communicate with remote services, often through a web interface \cite{maier2010first,falaki2010first}. We want to model our service application to that of a stateless webservice catering for the subscribers in the network. The HTTP traffic model in \cite{liu2001traffic} provides an open loop traffic model with a long tailed session size distribution, representative of the diversity of the requests. 
+Most mobile applications use HTTP as a means to communicate with remote services, often through a web interface \cite{maier2010first,falaki2010first}. We will model our service application to that of a stateless web service catering to the subscribers in the local network. The HTTP traffic model in \cite{liu2001traffic} provides an open loop traffic model with a long tailed session size distribution, representative of the diversity of mobile the requests. 
 
-Each session is separated in time $\lambda_{ses}$ with a poisson proecess. Each sessions produces $N_{req}$, sampled from an inverse gaussian distribution, where each is separated in time by log-normal distibuted delay $D_{req}$.
+Each session is separated in time with a poisson process of $\lambda_{ses}$. Each sessions produces $N_{req}$, sampled from an inverse Gaussian distribution, where each request is separated in time by log-normal distributed delay $D_{req}$.
 
-Each service adheres to the same properties, and are only distinguished by the VM in which they are running. Additionally, the properties of the service model are independant of \ue state and mobilty mode.
+Each service adheres to the same properties, and are only distinguished by the VM in which they are running. Additionally, the properties of the service model are independent of \ue{} state and mobility mode.
 
 % Even older ; reyes1999page
