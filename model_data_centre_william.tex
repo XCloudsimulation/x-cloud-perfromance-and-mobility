@@ -6,12 +6,12 @@
 	\label{fig:dc_model}
 \end{figure}
 
-As illustrated in Figure \ref{fig:dc_model}, \dc{} is modelled as series of parallel queues, one for each allotted VM, and thus, service $N_{i,vm}$. 
+As illustrated in Figure \ref{fig:dc_model}, \dc{} is modelled as a series of parallel queues, one for each allotted VM, and thus, service $N_{i,vm}$. 
 A dispatcher directs incoming requests to the corresponding VM based on which service $S_j$ it carries. 
-In normal operation, each request is served by each queue with a service time of $T_{i,vm}$, unique to the $i_{th}$ \dc{} and is proportional to the number of VMs $N_{i,vm}$ running concurrently in the \dc{}.
+In normal operation, each request is served by its associated queue with a service time of $T_{i,vm}$, unique to the $i_{th}$ \dc{} and is proportional to the number of VMs $N_{i,vm}$ running concurrently in the \dc{} in excess of $N_{ser}$.
 %When the queue in a VM or subset of VMs in a \dc{} $N_{i,sus vm} \subset N_{i,vm}$ are temprarily empty, the remaining VMs will be rewarded with a reduction in service time propotinal the number of suspended VMs $T_{sus} \propto N_{i,sus vm}$.
 
-To simplify the model of a \dc{} we will not consider CPU, memory, storage and intra \dc{} network separately.
+To simplify the model of a \dc{} we do not consider CPU, memory, storage and intra \dc{} network separately.
 Instead, in this paper, we will use an abstraction of one dimensional computational resource.
 
 \subsubsection{Hosting VMs in a \dc{}}
@@ -37,8 +37,8 @@ When a decision of deploying a new service in a \dc{} is taken, a new VM will be
 Due to the startup time, the newly admitted VM will not be able to start processing requests for a period of $T_{vm\_init}$. 
 %Nevertheless, the base VM service time for the \dc{} $T_{i,vm}$, will be adjusted to the for the new VM count.
 Nevertheless, the new VM will start using resources of the \dc{} from the time of admission.
-Because of that, the service time, $T_{i,vm}$, for each of the VMs hosted in that \dc{} will be recalculated at that point.
-Similarly, after finishing serving the last request, VM will be still using the resources of the \dc{} for time $T_{vm\_release}$.
+Because of that, the service time, $T_{i,vm}$, for each of the VMs hosted in that \dc{} will be recalculated to reflect the temporary load scenario.
+Similarly, after finishing serving the last request, the VM will still be using the resources of the \dc{} for time $T_{vm\_release}$.
 
 \subsubsection{VM activation scheme}
 Definitions: service, session, client subscribed to service 
