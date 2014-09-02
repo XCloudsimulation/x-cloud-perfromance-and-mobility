@@ -6,28 +6,41 @@
 	\label{fig:dc_model}
 \end{figure}
 
-As illustrated in Figure \ref{fig:dc_model}, \dc{} is modelled as a series of parallel queues, one for each allotted VM, and thus, service $N_{i,vm}$. 
-A dispatcher directs incoming requests to the corresponding VM based on which service $S_j$ it carries. 
-In normal operation, each request is served by its associated queue with a service time of $T_{i,vm}$, unique to the $i_{th}$ \dc{} and is proportional to the number of VMs $N_{i,vm}$ running concurrently in the \dc{} in excess of $N_{ser}$.
+We model a \dc{} using two parameters, the number of CPUs and their speed (in FLOPS or MIPS).
+We assume that all CPUs in one \dc{} are identical, we do not represent that they are located in separate physical machines (servers) and we do not consider memory, storage and intra \dc{} network.
+
+%As illustrated in Figure \ref{fig:dc_model}, a \dc{} is modelled as a series of parallel queues, one for each allotted VM, and thus, service $N_{i,vm}$. 
+%A dispatcher directs incoming requests to the corresponding VM based on which service $S_j$ it carries. 
+%In normal operation, each request is served by its associated queue with a service time of $T_{i,vm}$, unique to the $i_{th}$ \dc{} and is proportional to the number of VMs $N_{i,vm}$ running concurrently in the \dc{} in excess of $N_{ser}$.
 %When the queue in a VM or subset of VMs in a \dc{} $N_{i,sus vm} \subset N_{i,vm}$ are temprarily empty, the remaining VMs will be rewarded with a reduction in service time propotinal the number of suspended VMs $T_{sus} \propto N_{i,sus vm}$.
 
-To simplify the model of a \dc{} we do not consider CPU, memory, storage and intra \dc{} network separately.
-Instead, in this paper, we will use an abstraction of one dimensional computational resource.
+%To simplify the model of a \dc{} we do not consider CPU, memory, storage and intra \dc{} network separately.
+%Instead, in this paper, we will use an abstraction of one dimensional computational resource.
 
-\subsubsection{Hosting VMs in a \dc{}}
-Hosting VMs in a \dc{} can be modeled in two ways: with or without competition for computational resource.
+\subsubsection{Hosting applications in a \dc{}}
+%Hosting VMs in a \dc{} can be modeled in two ways: with or without competition for computational resource.
 
-In the first approach, the resources of a \dc{} are aggregated in one pool that is continuously divisible.
+%In the first approach, the resources of a \dc{} are aggregated in one pool that is continuously divisible.
 %Each VM gets an equal part of available resources inversely proportional to the number of VMs hosted in the data center.
 %The bigger is the number of VMs hosted in the \dc{}, the smaller amount of resources each of them gets.
-The pool of resources is divided evenly among all VMs.
-Hence, when the number of VMs hosted in the \dc{} increases, the amount of resources available for each VM shrinks.
-Consequently the service time of processing requests of each VM lengthens.
+%The pool of resources is divided evenly among all VMs.
+%Hence, when the number of VMs hosted in the \dc{} increases, the amount of resources available for each VM shrinks.
+%Consequently the service time of processing requests of each VM lengthens.
 
-In the second approach, the resources of a \dc{} are discrete and each computational unit is used exclusively by one VM.
-Therefore, there is no influence of one VM on another.
-To incorporate the fact that the amount of resources is finite we put a limit on the maximal number of VMs that can be hosted in one \dc{}.
-Furthermore, on each \dc each service is contained within one VM. 
+%In the second approach, the resources of a \dc{} are discrete and each computational unit is used exclusively by one VM.
+%Therefore, there is no influence of one VM on another.
+%To incorporate the fact that the amount of resources is finite we put a limit on the maximal number of VMs that can be hosted in one \dc{}.
+%Furthermore, on each \dc each service is contained within one VM. 
+The time that is necessary for serving an application request depends primarily on the CPU speed.
+%Limitation of the number of hosted application instances
+
+Strong limit --- The capacity of \dc{} is determined by the number of available CPUs. New instances of application are not accepted when the capacity of DC is reached.
+
+Flexible limit --- When the nominal capacity of DC is reached accepting new applications causes increase of the service time for all hosted application instances.
+
+\begin{equation}
+T_{serv} = \frac{max \lbrace \#CPUs, \#APPs \rbrace}{\#APPs} \cdot basic\_service\_time
+\end{equation}
 
 %\subsubsection{Overhead of VM start, stop, and migration}
 %\subsubsection{Overhead of VM initialization and migration}
