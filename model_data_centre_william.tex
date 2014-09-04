@@ -31,16 +31,16 @@ We assume that all CPUs in one \dc{} are identical, we do not represent that the
 %Therefore, there is no influence of one VM on another.
 %To incorporate the fact that the amount of resources is finite we put a limit on the maximal number of VMs that can be hosted in one \dc{}.
 %Furthermore, on each \dc each service is contained within one VM. 
-The time that is necessary for serving an application request depends primarily on the CPU speed.
+Applications run on the resources located in the \dcs{}.
+The time that is necessary for serving an application request depends on the CPU speed of a hosting machine.
+The capacity of a \dc{} is determined by the number of available CPUs. New instances of application are not accepted when the capacity of a \dc{} is reached.
 %Limitation of the number of hosted application instances
+%Strong limit --- The capacity of \dc{} is determined by the number of available CPUs. New instances of application are not accepted when the capacity of DC is reached.
+%Flexible limit --- When the nominal capacity of DC is reached accepting new applications causes increase of the service time for all hosted application instances.
 
-Strong limit --- The capacity of \dc{} is determined by the number of available CPUs. New instances of application are not accepted when the capacity of DC is reached.
-
-Flexible limit --- When the nominal capacity of DC is reached accepting new applications causes increase of the service time for all hosted application instances.
-
-\begin{equation}
-T_{serv} = \frac{max \lbrace \#CPUs, \#APPs \rbrace}{\#APPs} \cdot basic\_service\_time
-\end{equation}
+%\begin{equation}
+%T_{serv} = \frac{max \lbrace \#CPUs, \#APPs \rbrace}{\#APPs} \cdot basic\_service\_time
+%\end{equation}
 
 %\subsubsection{Overhead of VM start, stop, and migration}
 %\subsubsection{Overhead of VM initialization and migration}
