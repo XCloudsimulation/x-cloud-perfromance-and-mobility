@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.25)  4 SEP 2014 13:34
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.25)  4 SEP 2014 17:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -985,9 +985,10 @@ File: placeholder-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: placeholder-eps-converted-to.pdf used on input line 37
 .
 (pdftex.def)             Requested size: 253.04987pt x 159.2528pt.
- [5 <./PROCESS.pdf>]) (./conslusions.tex) (./future_research.tex) (./Performanc
-e and mobility in the x-cloud.bbl
-[6 <./IDLE.pdf> <./TRANSFERING_USER.pdf> <./placeholder-eps-converted-to.pdf>])
+) (./conslusions.tex)
+(./future_research.tex [5 <./PROCESS.pdf> <./IDLE.pdf>])
+(./Performance and mobility in the x-cloud.bbl [6 <./TRANSFERING_USER.pdf> <./p
+laceholder-eps-converted-to.pdf>])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -999,30 +1000,32 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7] (./Performance and mobility in the x-cloud.aux) ) 
+[7
+
+] (./Performance and mobility in the x-cloud.aux) ) 
 Here is how much of TeX's memory you used:
  14034 strings out of 493315
  252785 string characters out of 6137904
- 318501 words of memory out of 5000000
+ 321501 words of memory out of 5000000
  17142 multiletter control sequences out of 15000+600000
  43819 words of font info for 88 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  56i,14n,55p,1313b,288s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/t
-exmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/tim
-es/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a
-.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Performance and mobility in the x-cloud.pdf" (7 pages, 25869
-7 bytes).
+{/usr/local/texlive/2013/tex
+mf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2013/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2013/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
+/utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
+ocal/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "Performance and mobility in the x-cloud.pdf" (7 pages, 25643
+9 bytes).
 PDF statistics:
  159 PDF objects out of 1000 (max. 8388607)
  98 compressed objects within 1 object stream
