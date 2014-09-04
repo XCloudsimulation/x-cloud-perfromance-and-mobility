@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.8.29)  3 SEP 2014 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.8.29)  4 SEP 2014 13:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -950,11 +950,11 @@ ice.tex) (./model_mobilty.tex)
 (./model_mobile_network.tex) (./model_core_network.tex)
 (./model_data_centre_william.tex
 Package epstopdf Info: Source file: <fig_dc_model.eps>
-(epstopdf)                    date: 2014-09-02 22:11:22
-(epstopdf)                    size: 157140 bytes
+(epstopdf)                    date: 2014-09-04 13:08:34
+(epstopdf)                    size: 157072 bytes
 (epstopdf)             Output file: <fig_dc_model-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-07-10 22:51:39
-(epstopdf)                    size: 51869 bytes
+(epstopdf)                    date: 2014-09-03 11:20:39
+(epstopdf)                    size: 37482 bytes
 (epstopdf)             Command: <repstopdf --outfile=fig_dc_model-eps-converted
 -to.pdf fig_dc_model.eps>
 (epstopdf)             \includegraphics on input line 4.
@@ -962,16 +962,16 @@ runsystem(repstopdf --outfile=fig_dc_model-eps-converted-to.pdf fig_dc_model.ep
 s)...executed safely (allowed).
 
 Package epstopdf Info: Result file: <fig_dc_model-eps-converted-to.pdf>
-(epstopdf)                    date: 2014-09-03 11:20:39
-(epstopdf)                    size: 37482 bytes.
+(epstopdf)                    date: 2014-09-04 13:08:43
+(epstopdf)                    size: 37469 bytes.
 
-<fig_dc_model-eps-converted-to.pdf, id=27, 567.11874pt x 354.32375pt>
+<fig_dc_model-eps-converted-to.pdf, id=27, 548.0475pt x 354.32375pt>
 File: fig_dc_model-eps-converted-to.pdf Graphic file (type pdf)
 
 <use fig_dc_model-eps-converted-to.pdf>
 Package pdftex.def Info: fig_dc_model-eps-converted-to.pdf used on input line 4
 .
-(pdftex.def)             Requested size: 253.04987pt x 158.09798pt.
+(pdftex.def)             Requested size: 253.04987pt x 163.60184pt.
  [3 <./fig_dc_model-eps-converted-to.pdf>])) (./experiments.tex [4]) (./results
 .tex
 <PROCESS.pdf, id=73, 505.89pt x 505.89pt>
@@ -1024,11 +1024,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[7] (./Performance and mobility in the x-cloud.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[7] (./Performance and mobility in the x-cloud.aux) ) 
 Here is how much of TeX's memory you used:
  15584 strings out of 493117
  295810 string characters out of 6135433
@@ -1037,21 +1033,21 @@ Here is how much of TeX's memory you used:
  43819 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,14n,54p,1313b,290s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/te
-xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texli
-ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive
-/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/te
-xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/f
-onts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type
-1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/time
-s/utmri8a.pfb>
-Output written on "Performance and mobility in the x-cloud.pdf" (7 pages, 25531
-7 bytes).
+{/usr/local/texlive/2014/t
+exmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/texlive/2014/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2014/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/tim
+es/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmbi8a
+.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on "Performance and mobility in the x-cloud.pdf" (7 pages, 25530
+1 bytes).
 PDF statistics:
  158 PDF objects out of 1000 (max. 8388607)
  98 compressed objects within 1 object stream
