@@ -3,7 +3,7 @@
 The \xcloud model was implemented in Java employing simjava \cite{SimJava} as the event driven framework.
 
 \subsection{\Ue, mobility and network}
-To reveal the effect of varying load on the \dcs{}, the number of \ue{} service subscribers $N_{\ue}$, placement of the \dcs{}, and the number for services were varied independantly thoughout as many simulation scenarios. 
+To reveal the effect of varying load on the \dcs{}, the number of \ue{} service subscribers $N_{\ue}$, placement of the \dcs{}, and the number for services were varied independently throughout as many simulation scenarios.
 
 %Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ and the placement of the \dcs{} was varied. 
 In proportion to the range of movement and to be evenly divisible by $N_{dc}^2$, the simulation domain spans 16 \rbss{} $N_{rbs}$. The cell dimension $d_{rbs}$ adhere to a proposed maximum cell radius of 750 m, as detailed in \cite{shahab2013framework}. Although rectangular, its area equates to the area of a circular cell with a radius of 750 m, which results in a cell width and hight $d_{rbs}$ of 1300 m. The population of \ues{} subscribing to a service $N_{ue}$ ranged from from 10 to 1600 \ues{}, doubling with each increment. The number of \dcs{} $N_{dc}$ was varied between 16, 4 and 1, with each \dc{} serving 1, 4 or 16 \rbss{} respectively. Additionally, for each run of $N_{ue}$ the number of services $N_{ser}$ was varied between 1 and 5.
@@ -11,20 +11,20 @@ In proportion to the range of movement and to be evenly divisible by $N_{dc}^2$,
 
 The simulation time is set to 8 hours, $T_{sim}=28800$ seconds, leaving sufficient time for each \ue{} to on average visit half of the \rbss{}.
 
-\subsection{\Dc{} and VM parameters}
+\subsection{\Dc{}, VM, and application parameters}
 Times for resource allocation and release and log normal distributed with means $T_{vm\_init}$ and $T_{vm\_release}$ respectively, and are modelled after Amazon EC2 measurements for m1.small instance (1~vCPU, 1.7 GB of RAM and 160 GB disk) \cite{5719609}. %http://aws.amazon.com/ec2/previous-generation/
 
-The service time for each \dc{} is set heterogeneously, proportional to the mean request generation rate over the number of \rbss{} and the number of VMs running, see Equations \ref{eq:service_rate} \& \ref{eq:service_time}. Where $\lambda_{sys}$ is the aggregate arrival rate to the system, and $K$ is a scaling factor set to 1. Each VM is provisioned to handle 20 concurrent active subscribers ($N_{\ue} = 20$). The mean service time for each VM is thus $1/\mu$.
+The service time for each application is set heterogeneously, proportional %to the mean request generation rate over the number of \rbss{} and the number of VMs running, see Equations \ref{eq:service_rate} \& \ref{eq:service_time}. Where $\lambda_{sys}$ is the aggregate arrival rate to the system, and $K$ is a scaling factor set to 1. Each VM is provisioned to handle 20 concurrent active subscribers ($N_{\ue} = 20$). The mean service time for each VM is thus $1/\mu$.
 
-\begin{equation}
-	\label{eq:service_rate}
-	\mu = K \cdot  \lambda_{ue} \cdot N_{ue} \cdot \frac{ N_{services}}{N_{dc}} 
-\end{equation}
-
-\begin{equation}
-	\label{eq:service_time}
-	\lambda_{ue} = \frac{ \bar{N}_{requests} }{\bar{N}_{requests} \cdot \bar{T}_{request} + \bar{T}_{session} }
-\end{equation}
+%\begin{equation}
+%	\label{eq:service_rate}
+%	\mu = K \cdot  \lambda_{ue} \cdot N_{ue} \cdot \frac{ N_{services}}{N_{dc}} 
+%\end{equation}
+%
+%\begin{equation}
+%	\label{eq:service_time}
+%	\lambda_{ue} = \frac{ \bar{N}_{requests} }{\bar{N}_{requests} \cdot \bar{T}_{request} + \bar{T}_{session} }
+%\end{equation}
 
 As resources are assumed to be ubiquitous we wish to observe the effects of an overloaded \dc{}. For modelling simplicity, \dc{} capacity if constrained by a limit of how many VMs $N_{vm,limit}$ it simultaneously can host. Our experiment regards two fundamental provisioning scenarios. When the VM limit $N_{vm,limit}$ has been reached, either any new VMs are denied or the additionally needed \dc{} capacity is shared equally amongst the $N_{i,vm}$ VMs by increasing the service time $T_{i,ser}$ with a factor $K_{over}$, see Equation \ref{eq:shared_service_time}.
 
