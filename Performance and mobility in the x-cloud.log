@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.25)  9 SEP 2014 15:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.5.25)  9 SEP 2014 15:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -986,10 +986,8 @@ File: placeholder-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: placeholder-eps-converted-to.pdf used on input line 37
 .
 (pdftex.def)             Requested size: 253.04987pt x 159.2528pt.
-
-Underfull \vbox (badness 3039) has occurred while \output is active []
-
- [5 <./PROCESS.pdf> <./IDLE.pdf>]) (./conslusions.tex) (./future_research.tex)
+ [5 <./PROCESS.pdf> <./IDLE.pdf>])
+(./conslusions.tex) (./future_research.tex)
 (./Performance and mobility in the x-cloud.bbl [6 <./TRANSFERING_USER.pdf> <./p
 laceholder-eps-converted-to.pdf>])
 
@@ -1027,8 +1025,8 @@ amsfonts/cm/cmsy7.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times
 /utmb8a.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmbi8a.p
 fb></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/l
 ocal/texlive/2013/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on "Performance and mobility in the x-cloud.pdf" (7 pages, 24677
-8 bytes).
+Output written on "Performance and mobility in the x-cloud.pdf" (7 pages, 24681
+3 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  98 compressed objects within 1 object stream

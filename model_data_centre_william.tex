@@ -100,7 +100,7 @@ Similarly, after finishing serving the last request, the VM will still be using 
 %When VMs compete for resources, running additional VM on the destination side introduces an overhead by increasing the response time of other collocated VMs.
 
 When a \ue{} with an active session moves from one cell to another it is handovered between the responsible \rbss{}.
-If these \rbss{} are served by different \dc{} then the unprocessed requests of the active session are migrated.
+If these \rbss{} are served by different \dcs{} then the unprocessed requests from the active session are migrated.
 In case of applications (services) that have a user state it has to be also migrated together with the unprocessed requests.
 
 The statefulness of the service dictates the amount of information that needs to be migrated to the succeeding \dc{} in the case of the \ue{} handover.
