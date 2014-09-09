@@ -99,5 +99,9 @@ Similarly, after finishing serving the last request, the VM will still be using 
 %That can be modeled by running two instances of VM during the time of migration, one per each DC.
 %When VMs compete for resources, running additional VM on the destination side introduces an overhead by increasing the response time of other collocated VMs.
 
-The statefulness of the service dictates the amount of information that needs to be migrated to the succeeding \dc{}.
-The $H$ parameter in Equation \ref{eq:vm_util_comp}, is the state entropy of the communication between a \ue{} and a \dc{} which thus dictates the scale of the incurred overhead when migrating that users state the receiving \dc{}.
+When a \ue{} with an active session moves from one cell to another it is handovered between the responsible \rbss{}.
+If these \rbss{} are served by different \dc{} then the unprocessed requests of the active session are migrated.
+In case of applications (services) that have a user state it has to be also migrated together with the unprocessed requests.
+
+The statefulness of the service dictates the amount of information that needs to be migrated to the succeeding \dc{} in the case of the \ue{} handover.
+The $H$ parameter in Equation \ref{eq:vm_util_comp} is the state entropy of the communication between a \ue{} and a \dc{} which thus dictates the scale of the incurred overhead when migrating that user's state  to the receiving \dc{}.
