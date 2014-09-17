@@ -1,5 +1,4 @@
-\section{Simulation model}
-\label{sec:simulation_model}
+\section{Simulation model} \label{sec:simulation_model}
 
 \input{model_service.tex}
 \input{model_mobilty.tex}
@@ -8,13 +7,14 @@
 \input{model_data_centre_william.tex}
 
 \subsection{Fundamental system dynamics}
-
-The fundamental dynamics of the system can be expressed with if parameters as expressed in Equations \ref{eq:packet_delay_comp} \& \ref{eq:vm_util_comp}. Where $LU$ and $LS$ are vectors containing a \ues all successive \rbs and \dc associations, respectively, throughout the simulation time.
+The fundamental dynamics of the system can be expressed with the parameters as expressed in Equations \ref{eq:packet_delay_comp} \& \ref{eq:vm_util_comp}. Where $LU$ and $LS$ are vectors containing a \ac{MD}s all successive \ac{RBS} and \ac{DC} associations, respectively, throughout the simulation time. The composition of delays in Equations \ref{eq:packet_delay_comp} represents the modelled packet dynamics and thus analogously what we measure.
 
 \begin{multline}
 D_{M,LU(0)}+D_{N,LU(0) \rightarrow LS(0)} \\ + \sum_{i \in LS[1,N-1]} \left( D_{Mig} + T_{Q,i} + D_{N,i \rightarrow i+1s} \right) + T_{Q,LS(N)} \\ + T_{S,LS(N))} + D_{S,{LS(N)} \rightarrow LU(N)} + D_{M,LU(N)}
 \label{eq:packet_delay_comp}
 \end{multline}
+
+Simularly, Equation \ref{eq:vm_util_comp} captures the state composition of a \ac{VM}s life cycle. 
 
 \begin{multline}
 \sum^{N_{init}} T_{init} + \sum^{N_{term}} T_{term} + \sum^{N_{pktser}} T_{ser}  \\ + \sum_{i}^{N_{usrmig}}  \left( \sum_{j}^{N_{pktmig}}  T_{mig} +S\cdot T_{vmmig} \right ) + T_{idle}

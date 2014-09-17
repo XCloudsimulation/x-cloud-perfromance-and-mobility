@@ -2,12 +2,12 @@
 \begin{figure*}[tb]
 	\centering
 	\includegraphics[width=0.8\linewidth]{fig_dc_model_horizontal.eps} 
-	\caption{\Dc{} model}
+	\caption{\ac{DC} model}
 	\label{fig:dc_model}
 \end{figure*}
 
-We model a \dc{} using two parameters, the number of CPUs and their speed (in FLOPS or MIPS).
-We assume that all CPUs in one \dc{} are identical, we do not represent that they are located in separate physical machines (servers) and we do not consider memory, storage and intra \dc{} network.
+We model a \ac{DC}s using two parameters, the number of CPUs and their speed (in FLOPS or MIPS).
+We assume that all CPUs in one \ac{DC} are identical, we do not represent that they are located in separate physical machines (servers) and we do not consider memory, storage and intra \ac{DC} network.
 
 %As illustrated in Figure \ref{fig:dc_model}, a \dc{} is modelled as a series of parallel queues, one for each allotted VM, and thus, service $N_{i,vm}$. 
 %A dispatcher directs incoming requests to the corresponding VM based on which service $S_j$ it carries. 
@@ -17,7 +17,7 @@ We assume that all CPUs in one \dc{} are identical, we do not represent that the
 %To simplify the model of a \dc{} we do not consider CPU, memory, storage and intra \dc{} network separately.
 %Instead, in this paper, we will use an abstraction of one dimensional computational resource.
 
-\subsubsection{Hosting applications in a \dc{}}
+\subsubsection{Hosting applications in a \ac{DC}}
 %Hosting VMs in a \dc{} can be modeled in two ways: with or without competition for computational resource.
 
 %In the first approach, the resources of a \dc{} are aggregated in one pool that is continuously divisible.
@@ -31,9 +31,9 @@ We assume that all CPUs in one \dc{} are identical, we do not represent that the
 %Therefore, there is no influence of one VM on another.
 %To incorporate the fact that the amount of resources is finite we put a limit on the maximal number of VMs that can be hosted in one \dc{}.
 %Furthermore, on each \dc each service is contained within one VM. 
-Applications are hosted on the resources located in the \dcs{}.
+Applications are hosted on the resources located in the \ac{DC}s.
 The time that is necessary for serving an application request depends on the CPU speed of a hosting machine.
-The capacity of a \dc{} is determined by the number of available CPUs. 
+The capacity of a \ac{DC} is determined by the number of available CPUs. 
 %New instances of application are not accepted when the capacity of a \dc{} is reached.
 %Limitation of the number of hosted application instances
 %Strong limit --- The capacity of \dc{} is determined by the number of available CPUs. New instances of application are not accepted when the capacity of DC is reached.
@@ -43,7 +43,7 @@ The capacity of a \dc{} is determined by the number of available CPUs.
 %T_{serv} = \frac{max \lbrace \#CPUs, \#APPs \rbrace}{\#APPs} \cdot basic\_service\_time
 %\end{equation}
 
-Computation resources of a \dc{} are virtualized and each application instance runs inside of its own Virtual Machine (VM). Each VM is mapped to one physical CPU, so the maximal number of VMs, that can be hosted in a \dc{}, is equal to the number of CPUs.
+Computation resources of a \ac{DC} are virtualized and each application instance runs inside of its own Virtual Machine (VM). Each VM is mapped to one physical CPU, so the maximal number of VMs, that can be hosted in a \ac{DC}, is equal to the number of CPUs.
 
 %\subsubsection{Overhead of VM start, stop, and migration}
 %\subsubsection{Overhead of VM initialization and migration}
@@ -52,12 +52,12 @@ Computation resources of a \dc{} are virtualized and each application instance r
 In our scenario a VM hosts a service that can be concurrently accessed by many users.
 A VM is initialized upon receiving the first request from a client and terminated when there are no more requests to serve (waiting queue is empty and all sessions are finished).
 
-When a decision of deploying a new service in a \dc{} is taken, a new VM will be started there to host an application instance of that service.
+When a decision of deploying a new service in a \ac{DC} is taken, a new VM will be started there to host an application instance of that service.
 Due to the startup time, the newly admitted VM will not be able to start processing requests for a period of $T_{vm\_init}$. 
 %Nevertheless, the base VM service time for the \dc{} $T_{i,vm}$, will be adjusted to the for the new VM count.
-Nevertheless, the new VM will start using resources of the \dc{} from the time of admission.
+Nevertheless, the new VM will start using resources of the \ac{DC} from the time of admission.
 %Because of that, the service time, $T_{i,vm}$, for each of the VMs hosted in that \dc{} will be recalculated to reflect the temporary load scenario.
-Similarly, after finishing serving the last request, the VM will still be using the resources of the \dc{} for time $T_{vm\_release}$.
+Similarly, after finishing serving the last request, the VM will still be using the resources of the \ac{DC} for time $T_{vm\_release}$.
 
 %\subsubsection{VM activation scheme}
 %Definitions: service, session, client subscribed to service 
@@ -99,9 +99,10 @@ Similarly, after finishing serving the last request, the VM will still be using 
 %That can be modeled by running two instances of VM during the time of migration, one per each DC.
 %When VMs compete for resources, running additional VM on the destination side introduces an overhead by increasing the response time of other collocated VMs.
 
-When a \ue{} with an active session moves from one cell to another it is handovered between the responsible \rbss{}.
-If these \rbss{} are served by different \dcs{} then the unprocessed requests from the active session are migrated.
+When a \ac{MD}s with an active session moves from one cell to another it is handovered between the responsible \ac{RBS}s.
+If these \ac{RBS}s are served by different \ac{DC}s then the unprocessed requests from the active session are migrated.
 In case of applications (services) that have a user state it has to be also migrated together with the unprocessed requests.
 
-The statefulness of the service dictates the amount of information that needs to be migrated to the succeeding \dc{} in the case of the \ue{} handover.
-The $H$ parameter in Equation \ref{eq:vm_util_comp} is the state entropy of the communication between a \ue{} and a \dc{} which thus dictates the scale of the incurred overhead when migrating that user's state  to the receiving \dc{}.
+The statefulness of the service dictates the amount of information that needs to be migrated to the succeeding \ac{DC} in the case of the \ac{DC} handover. As services are not based in the network, but are rather migrated and to the \xcloud{} network on demand, all user and application states are assumed to have been migrated with the application. Therefore, the statefullness of a users stored state is defined by the the proportion of traffic that user has contributed to while in the network.
+
+The $H$ parameter in Equation \ref{eq:vm_util_comp} is the state entropy of the communication between a \ac{MD} and a \ac{DC} which thus dictates the scale of the incurred overhead when migrating that user's state  to the receiving \ac{DC}.

@@ -1,7 +1,7 @@
 \section{Desired model}
 \label{sec:desiard_model}
 
-The desired model shall provide a setting for which we can explore fundamental resource and performance properties of the \xcloud{} system paradigm with mobile \ues{}. The mobile \ues{}, radio access network, and service application will subject the \dcs{} to a load characteristic for generic mobile phone traffic and the type of services that plausible might be deployed to the \xcloud{}. Additionally, the model shall capture the systems fundamental parametrizable properties.
+The desired model shall provide a setting for which we can explore fundamental resource and performance properties of the \xcloud{} system paradigm with mobile \ac{MD}s. The \ac{MD}, radio access network, and service application will subject the \ac{DC}s to a load characteristic for generic mobile phone traffic and the type of services that plausibly might be deployed to the \xcloud{}. Additionally, the model shall capture the systems fundamental parametrizable properties.
 
 \begin{figure}[tb]
 	\centering
@@ -14,8 +14,8 @@ As the topology of any future \xcloud{} or proposed forthcoming mobile networks 
 
 In order to be able to explore the fundamental effects of mobility on the performance of an \xcloud{} service in the generic case, the model does not adhere to any socio-demographic patterns or urban topologies. In the absence of any geographic bias, the mobile network base stations are uniformly distributed across its 2-dimensional domain.
 
-Similarly, in order to represent the variety of possible services, the service model shall generate traffic that is characteristic for an active, generic, \ue{}. Additionally, the generated traffic shall be provided by a stochastic process that is independent of location.
+Similarly, in order to represent the variety of possible services, the service model shall generate traffic that is characteristic for an active, generic, \ac{MD}. Additionally, the generated traffic shall be provided by a stationary stochastic process that is independent of location.
 
-The mobility model, the service model, and the uniformly distributed mobile network will provide the modelled \dcs{} with a characteristic workload. It is worth reiterating that the traffic load and the characteristics of the service are more relevant to our investigation than specific topological and network properties.
+The mobility model, the service model, and the uniformly distributed mobile network will provide the modelled \ac{DC}s with a characteristic workload. It is worth reiterating that the traffic load and the characteristics of the service are more relevant to our investigation than specific topological and network properties.
 
-The \dc{} model will host multiple service in VMs that will process the arriving requests corresponding to its service commitment. Additionally, when a VM is migrated between \dcs{} it incurs a load on both \dcs{}. Furthermore, the resources within a \dc{} are shared amongst the hosted VMs. %The amount of compute resources dedicated to one service is thus proportional to the number of services hosted in that \dc{}.  Minute memory management, interference, and cross-talk effects are not fundamental performance properties at this scale and are therefore not modelled.
+The \ac{DC} model will host multiple service in VMs that will process the arriving requests corresponding to its service commitment. Additionally, when a VM is migrated between \ac{DC}s it incurs a load on both \ac{DC}s. Furthermore, the resources within a \ac{DC} are shared amongst the hosted VMs. %The amount of compute resources dedicated to one service is thus proportional to the number of services hosted in that \dc{}.  Minute memory management, interference, and cross-talk effects are not fundamental performance properties at this scale and are therefore not modelled.

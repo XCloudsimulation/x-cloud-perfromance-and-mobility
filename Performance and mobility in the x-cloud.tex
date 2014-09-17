@@ -14,8 +14,16 @@
 \usepackage{color}
 \usepackage{subfig}
 \usepackage[hyphens]{url}
+\usepackage[printonlyused,withpage]{acronym}
+
+\newacro{DC}{Data center}
+\newacro{VM}{Virtual Machine}
+\newacro{MD}{Mobile Device}
+\newacro{RBS}{Radio Base Station}
 
 \hyphenation{}
+
+
 
 \newcommand{\xcloud}{mobile cloud}
 \newcommand{\Xcloud}{Mobile cloud}
@@ -52,7 +60,7 @@ Email: jakub@cs.umu.se}}
 
 \begin{abstract}
 %\boldmath
-In a \xcloud{} topology the cloud resources are geographically dispersed throughout the mobile network. Services are actively located with close proximity to the \ue. Geographically migrating a service from \dc{} to \dc{} with its \ue{} imposes a load on the affected \dcs. Consequently, \ue{} mobility provides a fundamental problem to the \xcloud{} paradigm. This paper determines the fundamental service performance issues in system of mobile users with dispersed \dcs{}, in relation to the placement of the \xcloud{} host nodes and explores the \ue{} and provider utility of subscribing to a \xcloud{} node at a certain network depth.
+In a \xcloud{} topology the cloud resources are geographically dispersed throughout the mobile network. Services are actively located with close proximity to the \ac{MD}. Geographically migrating a service from \ac{DC} to \ac{DC} with its \ac{MD} imposes a load on the affected \dcs. Consequently, \ac{MD} mobility provides a fundamental problem to the \xcloud{} paradigm. This paper determines the fundamental service performance issues in system of mobile users with dispersed \ac{DC}s, in relation to the placement of the \xcloud{} host nodes and explores the \ac{MD} and provider utility of subscribing to a \xcloud{} node at a certain network depth.
 \end{abstract}
 
 \begin{keywords} 
@@ -91,5 +99,7 @@ Cloud, Mobility, Mobile infrastructure, User experience consistency, Omnipresent
 
 \bibliographystyle{plain}
 \bibliography{references}
+
+
 
 \end{document}
