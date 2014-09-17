@@ -31,7 +31,11 @@ We assume that all CPUs in one \ac{DC} are identical, we do not represent that t
 %Therefore, there is no influence of one VM on another.
 %To incorporate the fact that the amount of resources is finite we put a limit on the maximal number of VMs that can be hosted in one \dc{}.
 %Furthermore, on each \dc each service is contained within one VM. 
+<<<<<<< HEAD
 Applications are hosted on the resources located in the \ac{DC}s.
+=======
+Application instances are hosted on the resources located in the \dcs{}.
+>>>>>>> FETCH_HEAD
 The time that is necessary for serving an application request depends on the CPU speed of a hosting machine.
 The capacity of a \ac{DC} is determined by the number of available CPUs. 
 %New instances of application are not accepted when the capacity of a \dc{} is reached.
@@ -49,15 +53,25 @@ Computation resources of a \ac{DC} are virtualized and each application instance
 %\subsubsection{Overhead of VM initialization and migration}
 \subsubsection{VM initialization and termination}
 %When a request from a previously unknown service $S_j$ is served to a \dc{}, a new VM will be started to host that service.
-In our scenario a VM hosts a service that can be concurrently accessed by many users.
-A VM is initialized upon receiving the first request from a client and terminated when there are no more requests to serve (waiting queue is empty and all sessions are finished).
+In our scenario a VM hosts an application instance that can be concurrently accessed by many users.
+A VM is initialized upon receiving the first request from a \ue{} to that service and terminated when there are no more requests to that service to process (waiting queue is empty and all sessions are finished).
 
+<<<<<<< HEAD
 When a decision of deploying a new service in a \ac{DC} is taken, a new VM will be started there to host an application instance of that service.
 Due to the startup time, the newly admitted VM will not be able to start processing requests for a period of $T_{vm\_init}$. 
+=======
+When a decision of deploying an application instance of a new service in a \dc{} is taken, a new VM will be started there.
+%to host an application instance of that service.
+Due to the VM startup time, the newly admitted application instance will not be able to start processing requests for a period of $T_{vm\_init}$. 
+>>>>>>> FETCH_HEAD
 %Nevertheless, the base VM service time for the \dc{} $T_{i,vm}$, will be adjusted to the for the new VM count.
 Nevertheless, the new VM will start using resources of the \ac{DC} from the time of admission.
 %Because of that, the service time, $T_{i,vm}$, for each of the VMs hosted in that \dc{} will be recalculated to reflect the temporary load scenario.
+<<<<<<< HEAD
 Similarly, after finishing serving the last request, the VM will still be using the resources of the \ac{DC} for time $T_{vm\_release}$.
+=======
+Similarly, after application instance finishes serving the last request, the VM will still be using the resources of the \dc{} for time $T_{vm\_release}$.
+>>>>>>> FETCH_HEAD
 
 %\subsubsection{VM activation scheme}
 %Definitions: service, session, client subscribed to service 
@@ -99,9 +113,15 @@ Similarly, after finishing serving the last request, the VM will still be using 
 %That can be modeled by running two instances of VM during the time of migration, one per each DC.
 %When VMs compete for resources, running additional VM on the destination side introduces an overhead by increasing the response time of other collocated VMs.
 
+<<<<<<< HEAD
 When a \ac{MD}s with an active session moves from one cell to another it is handovered between the responsible \ac{RBS}s.
 If these \ac{RBS}s are served by different \ac{DC}s then the unprocessed requests from the active session are migrated.
 In case of applications (services) that have a user state it has to be also migrated together with the unprocessed requests.
+=======
+When a \ue{} with an active session moves from one cell to another it is handovered between the responsible \rbss{}.
+If these \rbss{} are served by different \dcs{} then the unprocessed requests from the active session are migrated.
+In case of statefull applications (services), user state has to be also migrated together with the unprocessed requests.
+>>>>>>> FETCH_HEAD
 
 The statefulness of the service dictates the amount of information that needs to be migrated to the succeeding \ac{DC} in the case of the \ac{DC} handover. As services are not based in the network, but are rather migrated and to the \xcloud{} network on demand, all user and application states are assumed to have been migrated with the application. Therefore, the statefullness of a users stored state is defined by the the proportion of traffic that user has contributed to while in the network.
 
